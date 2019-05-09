@@ -1,0 +1,188 @@
+/**
+* FreeCodeCamp assignment - Tribute page -
+* -- https://www.freecodecamp.org/
+* 
+*TODO: 
+*  1. breakpoints
+*  2. tether tooltips
+*  3. lazy load css background images (the simple way)
+*     Note... Find two versions of each photo you want to lazy load:
+*     https://codepen.io/derekmorash/post/simple-image-lazy-loading
+*/
+
+body {
+  padding-top: 50px;
+  /* fallback fonts */
+  font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+  font-size: 130%;
+}
+
+.em-text {
+  color: #1caa98 !important;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+}
+
+/*--- Jumbotron ---*/
+.jumbotron {
+  background     : url('../img/voyagedhermes_moebius_07.png') transparent no-repeat bottom;
+  background-size: cover;
+  min-height     : 900px;
+  /* min-height  : 100vh; */
+  position       : relative;
+  overflow       : hidden;
+}
+
+.jumbotron .app-btn {
+  width       : 40%;
+  margin-right: 30px;
+}
+
+.jumbotron h1 {
+  font-size    : 120%;
+  margin-top   : 30px;
+  margin-left  : 20px;
+  color        : #444;
+  /*text-shadow: color | offset-x | offset-y | blur-radius */
+  text-shadow  : #e0dfcd 2px 0 3px;
+}
+
+.jumbotron p {
+  margin-left: 25px;
+}
+
+/*--- Prologue ---*/
+.prologue h1 {
+  font-size: 400%;
+}
+
+.prologue {
+  text-align   : center;
+  margin-bottom: 20px;
+}
+
+.prologue p {
+  font-size: 135%;
+}
+
+.moebius {
+  width: 250px;
+}
+
+/*--- Article ---*/
+article {
+  margin-bottom: 20px;
+}
+
+article h2 {
+  display  : inline-block;
+  font-size: 300%;
+}
+
+article img {
+  border-radius: 5px;
+  width        : 22em;
+  margin-bottom: 10px;
+  padding-top  : 2px;
+}
+
+/*--- Video - iframe ---*/
+.video {
+  float        : left;
+  border-radius: 3px;
+  margin       : 10px 20px 10px 0;
+  max-width    : 660px;
+  max-height   : 315px;
+}
+
+/*--- Images ---*/
+.img-full {
+  width: 100%;
+}
+
+.img-left {
+  float       : left;
+  margin-right: 20px;
+}
+
+.img-right {
+  float      : right;
+  margin-left: 20px;
+}
+
+/*--- Images - simple css Zoom ---*/
+img,
+iframe {
+  -webkit-transition: all 1s ease;
+  /* Safari and Chrome */
+  -moz-transition: all 1s ease;
+  /* Firefox */
+  -ms-transition: all 1s ease;
+  /* IE 9 */
+  -o-transition: all 1s ease;
+  /* Opera */
+  transition: all 1s ease;
+}
+
+.img-left:hover,
+.img-right:hover,
+iframe:hover {
+  -webkit-transform: scale(1.40);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.40);
+  /* Firefox */
+  -ms-transform: scale(1.40);
+  /* IE 9 */
+  -o-transform: scale(1.40);
+  /* Opera */
+  transform: scale(1.40);
+}
+
+/*--- Footer ---*/
+footer {
+  background : #333;
+  color      : #8c8c8c;
+  height     : 300px;
+  margin-top : 10%;
+  padding-top: 30px;
+}
+
+footer h3 {
+  padding-bottom: 5px;
+}
+
+footer hr {
+  border-top: 1px solid #4e4e4e;
+  margin    : 40px 0 0 0;
+}
+
+footer p span,
+footer h3 {
+  color: #fff;
+}
+
+.text-center {
+  margin-bottom: 60px;
+}
+
+/*--- links ---*/
+.container a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/*--- Menu Scrolling ---*/
+
+/* target */
+a[id="home"]:target~#main {
+  -webkit-transform: translateY(0px);
+  transform        : translateY(0px);
+}
