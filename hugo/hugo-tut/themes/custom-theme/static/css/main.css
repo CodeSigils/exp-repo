@@ -1,5 +1,13 @@
 * {
 	font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.page-content {
+	margin   : 10px;
+	padding  : 10px;
+	color    : #444;
+	font-size: 16px;
 }
 
 .main-content {
@@ -20,11 +28,11 @@ header {
 	padding         : 1px;
 	text-transform  : capitalize;
 	background-color: #42a5f5;
-	color           : white;
 }
 
-header>h1 {
-	margin-bottom: -10px;
+header h1 a:any-link {
+	color          : #ffffff;
+	text-decoration: none;
 }
 
 footer {
