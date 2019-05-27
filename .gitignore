@@ -24,7 +24,13 @@ coverage
 .grunt
 
 # Bower dependency directory (https://bower.io/)
-bower_components
+bower_components/
+
+# CSS
+.sass-cache
+
+# OS
+.DS_Store
 
 # node-waf configuration
 .lock-wscript
@@ -56,6 +62,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.desktop
 
 # next.js build output
 .next

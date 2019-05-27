@@ -135,7 +135,7 @@
 					<a href="https://www.goodreads.com/book/show/270759.The_Collected_Fantasies_Vol_3" target="_blank"
 						alt="The Airtight Garage by Moebius">
 						<strong>The Airtight Garage</strong></a> and his groundbreaking
-					<a href="https://pdsoasis.github.io/arzachcomics.html" target="_blank"
+					<a href="https://comicvine.gamespot.com/arzach/4005-16697/images/" target="_blank"
 						alt="Arzach by Moebius"><strong>Arzach</strong>
 					</a> both began in Métal hurlant.
 				</p>
@@ -158,7 +158,7 @@
 						<img class="img-full img-responsive"
 							src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/arzach_01.jpg"
 							alt="Arzach" /></a>
-					<a href="https://pdsoasis.github.io/arzachcomics.html" target="_blank" alt="Arzach by Moebius">
+					<a href="https://readcomiconline.to/Comic/Arzach/TPB" target="_blank" alt="Arzach by Moebius">
 						<strong>Arzach</strong></a> is a wordless comic, created in a conscious attempt to breathe new life into
 					the comic genre which at the time was dominated by American superhero comics. It tracks the journey of the
 					title character flying on the back of his pterodactyl through a fantastic world mixing medieval fantasy with
@@ -282,9 +282,16 @@
 				</iframe>
 			</article>
 
-		</div>
-	</div>
-	<!-- /.container -->
+			<article>
+				<div>
+					<a class="my_ref" href="#">
+						<span class="my_element"> Hello from popper</span>
+					</a>
+				</div>
+			</article>
+
+		</div> <!-- ./col-md-12 -->
+	</div> <!-- /.container -->
 
 	<footer>
 		<div class="container">
@@ -300,5 +307,32 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper-utils.min.js"></script>
+
+	<script>
+		var ref = $('.my_ref');
+		var popup = $('.my_element');
+
+		popup.show();
+
+		ref.hover(function () {
+			//popup.hide();
+		});
+
+		var popper = new Popper(popup, onLeftPopper, {
+			placement: 'top',
+			modifiers: {
+				flip: {
+					behavior: ['left', 'bottom', 'top', 'rigth']
+				},
+				preventOverflow: {
+					boundariesElement: container,
+				},
+			},
+		});
+	</script>
 
 </body>

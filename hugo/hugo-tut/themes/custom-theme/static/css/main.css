@@ -1,0 +1,42 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.main-content {
+	border   : 1px solid black;
+	margin   : 10px;
+	padding  : 10px;
+	color    : grey;
+	font-size: 16px;
+}
+
+.summary {
+	font-size: 18px;
+}
+
+header {
+	text-align      : center;
+	height          : 75px;
+	padding         : 1px;
+	text-transform  : capitalize;
+	background-color: #42a5f5;
+	color           : white;
+}
+
+header>h1 {
+	margin-bottom: -10px;
+}
+
+footer {
+	position        : fixed;
+	color           : white;
+	height          : 35px;
+	background-color: #757575;
+	bottom          : 0px;
+	text-align      : center;
+	width           : 99%;
+}
+
+footer>p {
+	margin: 10px;
+}
