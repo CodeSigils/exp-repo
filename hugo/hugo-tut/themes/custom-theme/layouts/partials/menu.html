@@ -10,7 +10,12 @@
 			</a>
 			<ul class="submenu">
 				{{ range $key, $value := $taxonomy }}
-				<li> <strong>{{ $key }}</strong> </li>
+				<li>
+					<a href={{ .Page.Permalink }}>
+						<strong>{{ $key }}</strong>
+					</a>
+				</li>
+
 				<ul class="submenu-2">
 					{{ range $value.Pages }}
 					<li hugo-nav="{{ .RelPermalink}}">
@@ -20,6 +25,7 @@
 					</li>
 					{{ end }}
 				</ul>
+
 				{{ end }}
 			</ul>
 		</li>
