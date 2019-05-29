@@ -1,0 +1,47 @@
+<nav class="main-nav">
+
+	<h3> Render all sites taxonomies </h3>
+	<ul>
+		{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+		<li>
+			<a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">
+				<strong> {{ $taxonomyname }} </strong>
+				<span class="arrow">&#x25BC;</span>
+			</a>
+			<ul class="submenu">
+				{{ range $key, $value := $taxonomy }}
+				<li> <strong>{{ $key }}</strong> </li>
+				<ul class="submenu-2">
+					{{ range $value.Pages }}
+					<li hugo-nav="{{ .RelPermalink}}">
+						<a href="{{ .Permalink}}">
+							{{ .LinkTitle }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+				{{ end }}
+			</ul>
+		</li>
+		{{ end }}
+	</ul>
+
+	<h3>Filter by category:</h3>
+	<ul>
+		{{ range .Site.Taxonomies.categories }}
+		<li>
+			<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+		</li>
+		{{ end }}
+	</ul>
+
+	<h3>Filter by tag:</h3>
+	<ul>
+		{{ range .Site.Taxonomies.tags }}
+		<li>
+			<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+		</li>
+		{{ end }}
+	</ul>
+
+</nav>
