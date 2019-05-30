@@ -39,8 +39,8 @@
 	{{/*  custom categories  */}}
 	<div>
 		{{ if .Params.colours }}
-		<strong>Moods:</strong>
-		{{range .Params.moods}}
+		<strong>Colours:</strong>
+		{{range .Params.colours}}
 		<a href="{{ "/colours/" | relLangURL }}{{ "/" }}{{ . | urlize }}">{{ . }}</a>
 		{{end}}
 		{{end}}
