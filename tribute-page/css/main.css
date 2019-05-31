@@ -176,6 +176,8 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
+  border         : none;
+  outline        : none;
 }
 
 /*--- Menu Scrolling ---*/
