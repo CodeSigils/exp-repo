@@ -2,26 +2,42 @@
 * FreeCodeCamp assignment - Tribute page -
 * -- https://www.freecodecamp.org/
 * 
-*TODO: 
+* TODO: 
 *  1. breakpoints
 *  2. tether tooltips
-*  3. lazy load css background images (the simple way)
-*     Note... Find two versions of each photo you want to lazy load:
-*     https://codepen.io/derekmorash/post/simple-image-lazy-loading
 */
+
+/* CSS VARS */
+:root {
+  --colors-light-grey: #8c8c8c;
+  --colors-dark-grey : #21212c;
+  --colors-sea-blue  : #1caa98;
+  --colors-sand-white: #e0dfcd;
+  --fonts-family     : Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+  --fonts-p-nm       : 135%;
+  --fonts-p-lg       : 148%;
+  --fonts-h2-nm      : 115%;
+  --fonts-h2-lg      : 300%;
+  --fonts-h1-nm      : 115%;
+  --fonts-h1-lg      : 300%;
+  --img-header       : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
+  --img-text-space   : 20px;
+  --img-zoom-scale   : scale(1.40);
+  --img-zoom-speed   : all 1s ease;
+  --browser-translate: translateY(0px);
+}
 
 body {
   padding-top: 50px;
-  /* fallback fonts */
-  font-family: Helvetica, 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  font-family: var(--fonts-family);
 }
 
 p {
-  font-size: 130%;
+  font-size: var(--fonts-p-nm);
 }
 
 .em-text {
-  color: #1caa98 !important;
+  color: var(--colors-sea-blue) !important;
 }
 
 hr {
@@ -31,7 +47,7 @@ hr {
 
 /*--- Jumbotron ---*/
 .jumbotron {
-  background     : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png') transparent no-repeat bottom;
+  background     : var(--img-header) transparent no-repeat bottom;
   background-size: cover;
   min-height     : 95vh;
   position       : relative;
@@ -44,21 +60,21 @@ hr {
 }
 
 .jumbotron h1 {
-  font-size    : 120%;
+  font-size    : var(--fonts-h1-nm);
   margin-top   : 30px;
-  margin-left  : 20px;
-  color        : #444;
+  color        : var(--colors-dark-grey);
   /*text-shadow: color | offset-x | offset-y | blur-radius */
-  text-shadow  : #e0dfcd 2px 0 3px;
+  text-shadow  : var(--colors-sand-white) 2px 0 3px;
 }
 
+.jumbotron h1,
 .jumbotron p {
   margin-left: 25px;
 }
 
 /*--- Prologue ---*/
 .prologue h1 {
-  font-size: 400%;
+  font-size: var(--fonts-h1-lg);
 }
 
 .prologue {
@@ -67,11 +83,7 @@ hr {
 }
 
 .prologue p {
-  font-size: 135%;
-}
-
-.moebius {
-  width: 250px;
+  font-size: var(--fonts-p-lg);
 }
 
 /*--- Article ---*/
@@ -81,7 +93,7 @@ article {
 
 article h2 {
   display  : inline-block;
-  font-size: 300%;
+  font-size: var(--fonts-h2-lg);
 }
 
 article img {
@@ -101,52 +113,56 @@ article img {
 }
 
 /*--- Images ---*/
+.img-moebius {
+  width: 250px;
+}
+
 .img-full {
   width: 100%;
 }
 
 .img-left {
   float       : left;
-  margin-right: 20px;
+  margin-right: var(--img-text-space);
 }
 
 .img-right {
   float      : right;
-  margin-left: 20px;
+  margin-left: var(--img-text-space);
 }
 
 /*--- Images - simple css Zoom ---*/
 img,
 iframe {
-  -webkit-transition: all 1s ease;
+  -webkit-transition: var(--img-zoom-speed);
   /* Safari and Chrome */
-  -moz-transition: all 1s ease;
+  -moz-transition: var(--img-zoom-speed);
   /* Firefox */
-  -ms-transition: all 1s ease;
+  -ms-transition: var(--img-zoom-speed);
   /* IE 9 */
-  -o-transition: all 1s ease;
+  -o-transition: var(--img-zoom-speed);
   /* Opera */
-  transition: all 1s ease;
+  transition: var(--img-zoom-speed);
 }
 
 .img-left:hover,
 .img-right:hover,
 iframe:hover {
-  -webkit-transform: scale(1.40);
+  -webkit-transform: var(--img-zoom-scale);
   /* Safari and Chrome */
-  -moz-transform: scale(1.40);
+  -moz-transform: var(--img-zoom-scale);
   /* Firefox */
-  -ms-transform: scale(1.40);
+  -ms-transform: var(--img-zoom-scale);
   /* IE 9 */
-  -o-transform: scale(1.40);
+  -o-transform: var(--img-zoom-scale);
   /* Opera */
-  transform: scale(1.40);
+  transform: var(--img-zoom-scale);
 }
 
 /*--- Footer ---*/
 footer {
-  background : #333;
-  color      : #8c8c8c;
+  background : var(--colors-dark-grey);
+  color      : var(--colors-light-grey);
   height     : 300px;
   margin-top : 10%;
   padding-top: 30px;
@@ -156,14 +172,9 @@ footer h3 {
   padding-bottom: 5px;
 }
 
-footer hr {
-  border-top: 1px solid #4e4e4e;
-  margin    : 40px 0 0 0;
-}
-
 footer p span,
 footer h3 {
-  color: #fff;
+  color: var(--colors-sand-white);
 }
 
 /*--- links ---*/
@@ -180,6 +191,7 @@ a:active {
 
 /* target */
 a[id="home"]:target~#main {
-  -webkit-transform: translateY(0px);
-  transform        : translateY(0px);
+  -webkit-transform: var(--browser-translate);
+  -moz-transform   : var(--browser-translate);
+  transform        : var(--browser-translate);
 }
