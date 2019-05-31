@@ -33,8 +33,7 @@ hr {
 .jumbotron {
   background     : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png') transparent no-repeat bottom;
   background-size: cover;
-  min-height     : 900px;
-  /* min-height  : 100vh; */
+  min-height     : 95vh;
   position       : relative;
   overflow       : hidden;
 }

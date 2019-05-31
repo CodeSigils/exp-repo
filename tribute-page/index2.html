@@ -1,4 +1,6 @@
 <!-- 
+	IMG LAZY LOADING version with JQuery and JQuery.Lazy()
+	http://jquery.eisbehr.de/lazy/example_load-background-images
 	FreeCodeCamp assignment -- Tribute page 
 	- https://www.freecodecamp.org/
 -->
@@ -33,7 +35,7 @@
 	</nav>
 
 	<!-- Jumbotron -->
-	<div class="jumbotron">
+	<div class="jumbotron lazy">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -76,7 +78,8 @@
 					<p>
 						<a href="https://disneyandmore.blogspot.com/2012/03/legendary-artist-jean-moebius-giraud.html"
 							target="_blank">
-							<img width="100px" class="moebius img-left img-responsive" src="img/moebius.jpg" alt="Moebius info" />
+							<img width="100px" class="moebius img-left img-responsive lazy" data-src="img/moebius.jpg"
+								alt="Moebius info" />
 						</a>
 						<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams" target="_blank">
 							<strong>Mœbius</strong> (Jean Giraud)
@@ -87,7 +90,7 @@
 						unsurprisingly, started producing Western comics, which however did not sit well with his teachers.
 					</p>
 					<a href="https://www.lambiek.net/artists/g/giraud.htm" target="_blank">
-						<img class="img-right" src="img/moebius_western.jpg" alt="western comic by artist Giraud" />
+						<img class="img-right lazy" data-src="img/moebius_western.jpg" alt="western comic by artist Giraud" />
 					</a>
 					<p>
 						At 18, Giraud was drawing his own comic Western strip, "Frank et Jeremie", for the magazine "Far West", his
@@ -114,7 +117,7 @@
 				<h2>Science fiction and fantasy</h2>
 				<p>
 					<a href="https://www.humanoids.com/" target="_blank" alt="Moebius tribute article">
-						<img class="img-right img-responsive" src="img/Jodoverse_defaultbody.jpg"
+						<img class="img-right img-responsive lazy" data-src="img/Jodoverse_defaultbody.jpg"
 							alt="The humanoids society comic books" />
 					</a>
 					In 1975 with <a href="https://www.lambiek.net/artists/d/dionnet_jean-pierre.htm" target="_blank"
@@ -150,7 +153,7 @@
 				<h2>Arzach</h2>
 				<p>
 					<a href="http://pdsoasis.github.io/arzachcomics.html" target="_blank">
-						<img class="img-full img-responsive" src="img/arzach_01.jpg" alt="Arzach" /></a>
+						<img class="img-full img-responsive lazy" data-src="img/arzach_01.jpg" alt="Arzach" /></a>
 					<a href="https://comicvine.gamespot.com/arzach/4005-16697/images/" target="_blank" alt="Arzach by Moebius">
 						<strong>Arzach</strong></a> is a wordless comic, created in a conscious attempt to breathe new life into
 					the comic genre which at the time was dominated by American superhero comics. It tracks the journey of the
@@ -167,7 +170,7 @@
 				<p>
 					<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams/#more-89538"
 						target="_blank">
-						<img class="img-right img-responsive" src="img/moebius-hunter.jpeg" alt="The Airtight Garage" />
+						<img class="img-right img-responsive lazy" data-src="img/moebius-hunter.jpeg" alt="The Airtight Garage" />
 					</a>
 					His series <a href="https://www.goodreads.com/book/show/270759.The_Collected_Fantasies_Vol_3" target="_blank"
 						alt="The Airtight Garage by Moebius"><strong>The Airtight Garage</strong></a> is particularly notable for
@@ -210,7 +213,7 @@
 				<h2>The Incal</h2>
 				<p>
 					<a href="https://www.humanoids.com/y_page/pageShow/id/38" target="_blank" alt="The Incal book">
-						<img class="img-left img-responsive" src="img/inkal-black-egg.jpg" alt="The Incal" />
+						<img class="img-left img-responsive lazy" data-src="img/inkal-black-egg.jpg" alt="The Incal" />
 					</a>
 					In 1980 he started his famous <a href="http://www.humanoids.com/book/790" target="_blank"
 						alt="The Incal series"><strong>L'Incal</strong></a> series in collaboration with <a
@@ -231,7 +234,7 @@
 				</p>
 				<p>
 					<a href="https://www.humanoids.com/y_page/pageShow/id/38" target="_blank">
-						<img class="moebius img-right img-responsive" src="img/moebius-incal001-229x300.jpg"
+						<img class="moebius img-right img-responsive lazy" data-src="img/moebius-incal001-229x300.jpg"
 							alt="The Incal cover image" />
 					</a>During the questioning he denied that he received the <strong>Light Incal</strong>, a crystal of enormous
 					and infinite powers (it guides and protects those who believe in it, from a dying Berg.
@@ -265,15 +268,16 @@
 
 			<!-- Epilogue - Video -->
 			<article>
-				<iframe class="img-full img-responsive" style="height: 510px; margin-top:50px;"
-					src="https://www.youtube.com/embed/yB0Ma9027B4" frameborder="0"
+				<iframe class="img-full img-responsive lazy" style="height: 510px; margin-top:50px;"
+					data-src="https://www.youtube.com/embed/yB0Ma9027B4" frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>
 			</article>
 
 		</div>
+		<!-- / col-md-12 -->
 	</div>
-	<!-- /.container -->
+	<!-- / #main.container -->
 
 	<footer>
 		<div class="container">
@@ -289,4 +293,23 @@
 		</div>
 	</footer>
 
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Lazy loading: http://jquery.eisbehr.de/lazy/ -->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+	<script type="text/javascript"
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
+	<script>
+		$(function () {
+			$('#main .lazy').lazy({
+				combined: true,
+				visibleOnly: true,
+				appendScroll: $('#main'),
+				effect: 'fadeIn',
+				effectTime: 500,
+				threshold: 0,
+			});
+		});
+	</script>
 </body>
