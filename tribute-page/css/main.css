@@ -9,26 +9,29 @@
 
 /* CSS VARS */
 :root {
-  --colors-light-grey: #8c8c8c;
-  --colors-dark-grey : #21212c;
-  --colors-sea-blue  : #1caa98;
-  --colors-sand-white: #e0dfcd;
-  --fonts-family     : Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
-  --fonts-p-nm       : 135%;
-  --fonts-p-lg       : 148%;
-  --fonts-h2-nm      : 115%;
-  --fonts-h2-lg      : 300%;
-  --fonts-h1-nm      : 115%;
-  --fonts-h1-lg      : 300%;
-  --img-header       : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
-  --img-text-space   : 20px;
-  --img-border-radius: 5px;
-  --img-zoom-scale   : scale(1.40);
-  --img-zoom-speed   : all 1s ease;
-  --browser-translate: translateY(0px);
+  --colors-light-grey   :#8c8c8c;
+  --colors-dark-grey    :#21212c;
+  --colors-sea-blue     :#1caa98;
+  --colors-sand-white   :#e0dfcd;
+  --fonts-family        :Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
+    Ubuntu, Cantarell, 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+  --fonts-p-nm          :135%;
+  --fonts-p-lg          :148%;
+  --fonts-h2-nm         :115%;
+  --fonts-h2-lg         :300%;
+  --fonts-h1-nm         :115%;
+  --fonts-h1-lg         :300%;
+  --img-header          :url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
+  --img-pattern         :url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/patterns/topography.png');
+  --img-text-space      :20px;
+  --img-border-radius   :5px;
+  --img-zoom-scale      :scale(1.4);
+  --img-zoom-speed      :all 1s ease;
+  --browser-translate   :translateY(0px);
 }
 
 body {
+  background-image: var(--img-pattern);
   padding-top: 50px;
   font-family: var(--fonts-family);
 }
@@ -48,24 +51,24 @@ hr {
 
 /*--- Jumbotron ---*/
 .jumbotron {
-  background     : var(--img-header) transparent no-repeat bottom;
+  background: var(--img-header) transparent no-repeat bottom;
   background-size: cover;
-  min-height     : 95vh;
-  position       : relative;
-  overflow       : hidden;
+  min-height: 95vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .jumbotron .app-btn {
-  width       : 40%;
+  width: 40%;
   margin-right: 30px;
 }
 
 .jumbotron h1 {
-  font-size    : var(--fonts-h1-nm);
-  margin-top   : 30px;
-  color        : var(--colors-dark-grey);
+  font-size: var(--fonts-h1-nm);
+  margin-top: 30px;
+  color: var(--colors-dark-grey);
   /*text-shadow: color | offset-x | offset-y | blur-radius */
-  text-shadow  : var(--colors-sand-white) 2px 0 3px;
+  text-shadow: var(--colors-sand-white) 2px 0 3px;
 }
 
 .jumbotron h1,
@@ -79,7 +82,7 @@ hr {
 }
 
 .prologue {
-  text-align   : center;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -93,22 +96,22 @@ article {
 }
 
 article h2 {
-  display  : inline-block;
+  display: inline-block;
   font-size: var(--fonts-h2-lg);
 }
 
 article img {
   border-radius: var(--img-border-radius);
-  width        : 22em;
+  width: 22em;
   margin-bottom: 10px;
-  padding-top  : 2px;
+  padding-top: 2px;
 }
 
 /*--- Video - iframe ---*/
 .video {
-  float        : left;
+  float: left;
   border-radius: var(--img-border-radius);
-  margin       : 10px 20px 10px 0;
+  margin: 10px 20px 10px 0;
 }
 
 /*--- Images ---*/
@@ -121,12 +124,12 @@ article img {
 }
 
 .img-left {
-  float       : left;
+  float: left;
   margin-right: var(--img-text-space);
 }
 
 .img-right {
-  float      : right;
+  float: right;
   margin-left: var(--img-text-space);
 }
 
@@ -160,10 +163,10 @@ iframe:hover {
 
 /*--- Footer ---*/
 footer {
-  background : var(--colors-dark-grey);
-  color      : var(--colors-light-grey);
-  height     : 300px;
-  margin-top : 10%;
+  background: var(--colors-dark-grey);
+  color: var(--colors-light-grey);
+  height: 300px;
+  margin-top: 10%;
   padding-top: 30px;
 }
 
@@ -182,15 +185,15 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  border         : none;
-  outline        : none;
+  border: none;
+  outline: none;
 }
 
 /*--- Menu Scrolling ---*/
 
 /* target */
-a[id="home"]:target~#main {
+a[id='home']:target ~ #main {
   -webkit-transform: var(--browser-translate);
-  -moz-transform   : var(--browser-translate);
-  transform        : var(--browser-translate);
+  -moz-transform: var(--browser-translate);
+  transform: var(--browser-translate);
 }
