@@ -44,11 +44,6 @@ p {
   color: var(--colors-sea-green) !important;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-}
-
 /*--- Jumbotron ---*/
 .jumbotron {
   background: var(--img-header) transparent no-repeat bottom;
