@@ -9,25 +9,25 @@
 
 /* CSS VARS */
 :root {
-  --colors-light-grey   :#8c8c8c;
-  --colors-dark-grey    :#21212c;
-  --colors-sea-blue     :#1caa98;
-  --colors-sand-white   :#e0dfcd;
-  --fonts-family        :Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
+  --colors-light-grey   : #8c8c8c;
+  --colors-dark-grey    : #21212c;
+  --colors-sea-green    : #1a9181;
+  --colors-sand-white   : #e0dfcd;
+  --fonts-family        : Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
     Ubuntu, Cantarell, 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
-  --fonts-p-nm          :135%;
-  --fonts-p-lg          :148%;
-  --fonts-h2-nm         :115%;
-  --fonts-h2-lg         :300%;
-  --fonts-h1-nm         :115%;
-  --fonts-h1-lg         :300%;
-  --img-header          :url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
-  --img-pattern         :url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/patterns/topography.png');
-  --img-text-space      :20px;
-  --img-border-radius   :5px;
-  --img-zoom-scale      :scale(1.4);
-  --img-zoom-speed      :all 1s ease;
-  --browser-translate   :translateY(0px);
+  --fonts-p-nm          : 135%;
+  --fonts-p-lg          : 148%;
+  --fonts-h2-nm         : 115%;
+  --fonts-h2-lg         : 300%;
+  --fonts-h1-nm         : 115%;
+  --fonts-h1-lg         : 300%;
+  --img-header          : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
+  --img-pattern         : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/patterns/topography.png');
+  --img-text-space      : 20px;
+  --img-border-radius   : 5px;
+  --img-zoom-scale      : scale(1.4);
+  --img-zoom-speed      : all 1s ease;
+  --browser-translate   : translateY(0px);
 }
 
 body {
@@ -41,7 +41,7 @@ p {
 }
 
 .em-text {
-  color: var(--colors-sea-blue) !important;
+  color: var(--colors-sea-green) !important;
 }
 
 hr {
@@ -187,6 +187,9 @@ a:active {
   text-decoration: none;
   border: none;
   outline: none;
+}
+a:visited {
+  color: var(--colors-sea-green);
 }
 
 /*--- Menu Scrolling ---*/
