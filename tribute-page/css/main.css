@@ -149,15 +149,10 @@ iframe {
 .img-right:hover,
 video:hover,
 iframe:hover {
-  /* Safari and Chrome */
   -webkit-transform: var(--img-zoom-scale);
-  /* Firefox */
   -moz-transform: var(--img-zoom-scale);
-  /* IE 9 */
   -ms-transform: var(--img-zoom-scale);
-  /* Opera */
   -o-transform: var(--img-zoom-scale);
-  /* default */
   transform: var(--img-zoom-scale);
 }
 
@@ -180,5 +175,7 @@ footer p span
 a[id='home']:target ~ #prologue {
   -webkit-transform: var(--browser-translate);
   -moz-transform: var(--browser-translate);
+  -ms-transform: var(--browser-translate);
+  -o-transform: var(--browser-translate);
   transform: var(--browser-translate);
 }
