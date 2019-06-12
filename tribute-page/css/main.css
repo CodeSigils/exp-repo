@@ -39,16 +39,13 @@
 }
 
 /*--- links ---*/
-a:link,
-a:visited,
-a:hover,
-a:active {
+#main a {
   text-decoration: none;
   border: none;
   outline: none;
 }
-a:visited {
-  color: var(--colors-sea-green);
+#main a:visited {
+  color: var(--colors-sea-green) !important;
 }
 
 /*--- Paragraphs-Emphasis-Title ---*/
