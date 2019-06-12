@@ -133,14 +133,15 @@ img {
 img,
 video,
 iframe {
-  -webkit-transition: var(--img-zoom-speed);
   /* Safari and Chrome */
-  -moz-transition: var(--img-zoom-speed);
+  -webkit-transition: var(--img-zoom-speed);
   /* Firefox */
-  -ms-transition: var(--img-zoom-speed);
+  -moz-transition: var(--img-zoom-speed);
   /* IE 9 */
-  -o-transition: var(--img-zoom-speed);
+  -ms-transition: var(--img-zoom-speed);
   /* Opera */
+  -o-transition: var(--img-zoom-speed);
+  /* default */
   transition: var(--img-zoom-speed);
 }
 
@@ -148,14 +149,15 @@ iframe {
 .img-right:hover,
 video:hover,
 iframe:hover {
-  -webkit-transform: var(--img-zoom-scale);
   /* Safari and Chrome */
-  -moz-transform: var(--img-zoom-scale);
+  -webkit-transform: var(--img-zoom-scale);
   /* Firefox */
-  -ms-transform: var(--img-zoom-scale);
+  -moz-transform: var(--img-zoom-scale);
   /* IE 9 */
-  -o-transform: var(--img-zoom-scale);
+  -ms-transform: var(--img-zoom-scale);
   /* Opera */
+  -o-transform: var(--img-zoom-scale);
+  /* default */
   transform: var(--img-zoom-scale);
 }
 
