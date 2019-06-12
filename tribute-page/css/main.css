@@ -15,8 +15,8 @@
   --colors-dark-blue    : #164269;
   --colors-sea-green    : #1a9181;
   --colors-sand-white   : #e0dfcd;
-  --fonts-family-main   : Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
-    Ubuntu, Cantarell, 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+  --fonts-family-main   : Helvetica, 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
+    Ubuntu, Cantarell, 'Helvetica Neue',  'Open Sans', Arial, sans-serif;
   --fonts-p-nm          : 135%;
   --fonts-p-lg          : 148%;
   --fonts-h2-nm         : 115%;
@@ -92,9 +92,10 @@ p {
 /*--- Articles ---*/
 article {
   margin-bottom: 20px;
+  float: left;
 }
 article h2 {
-  display: inline-block;
+  display: block;
   font-size: var(--fonts-h2-lg);
 }
 article img {
@@ -104,7 +105,6 @@ article img {
 
 /*--- Video-iframe ---*/
 .video {
-  float: left;
   border-radius: var(--img-border-radius);
   margin: 10px 20px 10px 0;
 }
