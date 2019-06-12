@@ -70,15 +70,8 @@ p {
   overflow: hidden;
 }
 
-.jumbotron .app-btn {
-  width: 40%;
-  margin-right: 30px;
-}
-
 .jumbotron h1 {
-  font-size: var(--fonts-h1-nm);
-  margin-top: 30px;
-  color: var(--colors-dark-grey);
+  margin-top: 40px;
   /*text-shadow: color | offset-x | offset-y | blur-radius */
   text-shadow: var(--colors-sand-white) 2px 0 3px;
 }
