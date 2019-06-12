@@ -66,7 +66,6 @@ p {
   background: var(--img-header) transparent no-repeat bottom;
   background-size: cover;
   min-height: 100vh;
-  position: relative;
   overflow: hidden;
 }
 
@@ -161,17 +160,16 @@ iframe:hover {
 
 /*--- Footer ---*/
 footer {
-  background: var(--colors-dark-grey);
+  background-color: var(--colors-dark-grey);
   color: var(--colors-light-grey);
-  height: 300px;
-  margin-top: 10%;
+  height: 280px;
+  margin-top: 5%;
   padding-top: 30px;
 }
-footer h3 {
-  padding-bottom: 5px;
-}
+
 footer p span,
 footer h3 {
+  padding-bottom: 5px;
   color: var(--colors-sand-white);
 }
 
