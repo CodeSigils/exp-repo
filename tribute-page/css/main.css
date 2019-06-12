@@ -40,16 +40,17 @@
   padding-top: 50px;
   font-family: var(--fonts-family-main);
 }
-#main a {
+#main a, a {
   text-decoration: none;
   border: none;
   outline: none;
 }
-#main a:link {
+#main a:link, a:link {
   color: var(--colors-sky-blue);
 }
-#main a:hover, #main a:visited {
-  color: var(--colors-sea-green) !important;
+#main a:hover, a:hover,
+#main a:visited, a:visited {
+  color: var(--colors-sea-green, #1a9181) !important;
 }
 
 /*--- Paragraphs-Emphasis-Title ---*/
@@ -57,7 +58,7 @@ p {
   font-size: var(--fonts-p-nm);
 }
 .em-text {
-  color: var(--colors-sea-green) !important;
+  color: var(--colors-sea-green, #1a9181) !important;
 }
 #title {
   margin-top: 40px;
