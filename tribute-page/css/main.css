@@ -24,6 +24,7 @@
   --fonts-h1-title      : 400%;
   --img-header          : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
   --img-pattern         : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/patterns/topography.png');
+  --img-width: 22em;
   --img-text-space      : 20px;
   --img-border-radius   : 5px;
   --img-zoom-scale      : scale(1.4);
@@ -68,13 +69,9 @@ p {
   min-height: 100vh;
   overflow: hidden;
 }
-
 .jumbotron h1 {
   margin-top: 40px;
-  /*text-shadow: color | offset-x | offset-y | blur-radius */
-  text-shadow: var(--colors-sand-white) 2px 0 3px;
 }
-
 .jumbotron h1,
 .jumbotron p {
   margin-left: 25px;
@@ -101,13 +98,11 @@ article h2 {
   font-size: var(--fonts-h2-lg);
 }
 article img {
-  border-radius: var(--img-border-radius);
-  width: 22em;
   margin-bottom: 10px;
-  padding-top: 2px;
+  padding-top: 5px;
 }
 
-/*--- Video - iframe ---*/
+/*--- Video-iframe ---*/
 .video {
   float: left;
   border-radius: var(--img-border-radius);
@@ -115,6 +110,10 @@ article img {
 }
 
 /*--- Images ---*/
+img {
+  border-radius: var(--img-border-radius);
+  width: var(--img-width);
+}
 .img-moebius {
   width: 250px;
 }
@@ -174,7 +173,6 @@ footer h3 {
 }
 
 /*--- Menu Scrolling ---*/
-/* target */
 a[id='home']:target ~ #prologue {
   -webkit-transform: var(--browser-translate);
   -moz-transform: var(--browser-translate);
