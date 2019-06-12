@@ -1,6 +1,7 @@
 <!-- 
-	FreeCodeCamp assignment -- Tribute page 
-	- https://www.freecodecamp.org/
+	FreeCodeCamp assignment 
+	-- Tribute page 
+	-- https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-tribute-page
 -->
 
 <head>
@@ -25,11 +26,13 @@
 </head>
 
 <body>
+	<div id="main">
+
 	<!-- .navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a id="home" class="navbar-brand em-text" href="#main">
+				<a id="home" class="navbar-brand em-text" href="#prologue">
 					Mœbius
 				</a>
 			</div>
@@ -38,12 +41,12 @@
 		</div>
 	</nav>
 
-	<!-- Jumbotron -->
+	<!-- Title - Jumbotron -->
 	<div class="jumbotron lazyload">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h1>Jean <span class="em-text">Giraud</span></h1>
+					<h1 id="title">Jean <span class="em-text">Giraud</span></h1>
 					<p>8 May 1938 – 10 March 2012</p>
 				</div>
 			</div>
@@ -51,17 +54,17 @@
 	</div>
 
 	<!-- Main page container -->
-	<div id="main" class="container">
+	<div class="container">
 
 		<!-- Prologue -->
 		<div class="row">
 			<div class="container">
-				<div class="col-md-12 prologue">
+				<div id="prologue" class="col-md-12">
 					<h1>Voyages in a sea of<span class="em-text"> color</span> &amp; ink</h1>
 					<p>
 						<strong>Jean Henri Gaston Giraud</strong> was a French artist, cartoonist and writer <br />who worked in
 						the Franco-Belgian bandes dessinées tradition.<br />Giraud gained fame worldwide under the pseudonym
-						<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams/" target="_blank">
+						<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams/" alt="moebius and the key of dreams" target="_blank">
 							<strong> Mœbius</strong>
 						</a>
 						<br />which he used for his paintings. Esteemed by Federico Fellini,<br />Stan Lee
@@ -81,10 +84,11 @@
 					<h2>Early life &amp; Westerns</h2>
 					<p>
 						<a href="https://youtu.be/501zclIUQBQ"
-							target="_blank">
+							target="_blank" alt="Jean Giraud interview">
 							<img class="img-moebius img-left img-responsive lazyload"
 								data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius.jpg"
-								alt="Jean Giraud interview" />
+								alt="moebius portrait photo"
+								/>
 						</a>
 						<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams" target="_blank">
 							<strong>Mœbius</strong> (Jean Giraud)
@@ -301,4 +305,6 @@
 		</div>
 	</footer>
 
+</div>
+<!-- /#main -->
 </body>
