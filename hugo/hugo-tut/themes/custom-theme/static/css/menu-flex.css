@@ -1,6 +1,6 @@
 .main-nav a {
-	color: #f6f7f8;
-	background: #141f1e;
+	color: var(--colors-light-grey);
+	background: var(--colors-pure-black);
 	display: block;
 	height: 40px;
 	width: 10rem;
@@ -12,6 +12,7 @@
 }
 
 .main-nav a:hover {
+	color: var(--colors-pure-white);
 	background: var(--colors--main-orange);
 }
 
@@ -21,6 +22,7 @@
 }
 
 .main-nav li {
+	background: var(--colors-main-orange);
 	position: relative;
 }
 
@@ -44,7 +46,7 @@
 
 .submenu li {
 	position: relative;
-	background: #ee8002;
+	background: var(--colors-main-orange);
 	z-index: 100;
 }
 
