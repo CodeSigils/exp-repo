@@ -57,7 +57,7 @@
 
 	<h3>4. List categories with counts of articles on each category.</h3>
 	{{ range $name, $items := .Site.Taxonomies.categories }}
-	<ul>
+	<ul class="main-nav left">
 		<li>
 			<a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">
 				- {{ $name }} &nbsp;

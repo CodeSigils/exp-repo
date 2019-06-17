@@ -1,14 +1,23 @@
+.main-nav h3 {
+	margin: 50px auto 5px auto;
+}
+
 .main-nav a {
 	color: var(--colors-light-grey);
 	background: var(--colors-pure-black);
 	display: block;
-	height: 40px;
+	height: 50px;
 	width: 10rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
 	transition: background 0.4s;
+}
+
+.main-nav .left a {
+	margin-left: 0.5em;
+	justify-content: left;
 }
 
 .main-nav a:hover {
