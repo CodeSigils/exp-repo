@@ -20,18 +20,6 @@
 		{{/*  created date  */}}
 		<div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
 
-		{{/*  tags  */}}
-		<div>
-			{{ if .Params.tags }}
-			<strong>Tags:</strong>
-			{{ range .Params.tags }}
-			<a href="{{ "/tags/" | relLangURL }}{{ "/" }}{{ . | urlize }}">
-				{{ . }}
-			</a>
-			{{end}}
-			{{end}}
-		</div>
-
 		{{/*  categories  */}}
 		<div>
 			{{ if .Params.categories }}
@@ -48,6 +36,18 @@
 			<strong>Colours:</strong>
 			{{range .Params.colours}}
 			<a href="{{ "/colours/" | relLangURL }}{{ "/" }}{{ . | urlize }}">{{ . }}</a>
+			{{end}}
+			{{end}}
+		</div>
+
+		{{/*  tags  */}}
+		<div>
+			{{ if .Params.tags }}
+			<strong>Tags:</strong>
+			{{ range .Params.tags }}
+			<a href="{{ "/tags/" | relLangURL }}{{ "/" }}{{ . | urlize }}">
+				{{ . }}
+			</a>
 			{{end}}
 			{{end}}
 		</div>
