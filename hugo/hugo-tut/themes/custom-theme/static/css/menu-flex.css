@@ -1,52 +1,51 @@
 .main-nav a {
-	color          : #f6f7f8;
-	background     : #141f1e;
-	display        : block;
-	height         : 40px;
-	width          : 10rem;
-	display        : flex;
-	align-items    : center;
+	color: #f6f7f8;
+	background: #141f1e;
+	display: block;
+	height: 40px;
+	width: 10rem;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	transition     : background 0.4s;
+	transition: background 0.4s;
 }
 
 .main-nav a:hover {
-	background: #ee8002;
+	background: var(--colors--main-orange);
 }
 
 .main-nav ul {
 	list-style: none;
-	display   : flex;
+	display: flex;
 }
 
 .main-nav li {
-	text-align: center;
-	position  : relative;
+	position: relative;
 }
 
-.main-nav li:hover .submenu>li {
+.main-nav li:hover .submenu > li {
 	display: block;
-	top    : 0px;
+	top: 0px;
 }
 
 .submenu li {
-	display : none;
+	display: none;
 	position: absolute;
-	top     : 0px;
+	top: 0px;
 }
 
 .submenu {
-	display       : flex;
+	display: flex;
 	flex-direction: column;
-	position      : absolute;
-	width         : 100%;
+	position: absolute;
+	width: 100%;
 }
 
 .submenu li {
-	position  : relative;
+	position: relative;
 	background: #ee8002;
-	z-index   : 100;
+	z-index: 100;
 }
 
 .submenu li:hover .submenu-2 li {
@@ -58,10 +57,10 @@
 }
 
 .submenu-2 {
-	display       : flex;
+	display: flex;
 	flex-direction: column;
-	position      : absolute;
-	top           : 0px;
-	left          : 100px;
-	width         : 120px;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	width: 120px;
 }

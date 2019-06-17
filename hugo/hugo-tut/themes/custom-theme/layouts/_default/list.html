@@ -62,6 +62,16 @@
 	</section>
 	{{ end }}
 
+	{{/*  <h3> List categories with counts of articles on each category.</h3>
+	{{ range $name, $items := .Site.Taxonomies.categories }}
+	<p>
+		<a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">
+			- {{ $name }} &nbsp;
+			<span>({{ len $items }})</span>
+		</a>
+	</p>
+	{{ end }} */}}
+
 </div>
 
 {{ partial "footer" . }}
