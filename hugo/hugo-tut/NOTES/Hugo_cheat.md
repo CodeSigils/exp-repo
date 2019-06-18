@@ -1,7 +1,9 @@
 ### Hugo detailed documentation
+
 https://bwaycer.github.io/hugo_tutorial.hugo/extras/menus/
 
 ### Hugo current official documentation
+
 https://gohugo.io/documentation/
 
 ```sh
@@ -18,6 +20,7 @@ https://gohugo.io/documentation/
 ```
 
 ## Themes order
+
 The lookup order for base templates is as follows:
 
 ```yaml
@@ -50,6 +53,7 @@ Here is the lookup order for the posts base template:
 ```
 
 ## Content Sections
+
 Hugo generates a section tree that matches your content.
 
 A "Section" is a collection of pages that gets defined based on the organization structure under the `content/` directory.
@@ -72,12 +76,14 @@ content
 
 ```
 
-
 ## Tips and tricks
+
 Link: [https://dev.to/remotesynth/quick-tips-and-tricks-for-hugo-development-7dc](https://dev.to/remotesynth/quick-tips-and-tricks-for-hugo-development-7dc)
 
 ### Lists
+
 - List of pages
+
 ```go
 {{ range .Site.RegularPages }}
 <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -86,7 +92,8 @@ Link: [https://dev.to/remotesynth/quick-tips-and-tricks-for-hugo-development-7dc
 ```
 
 - List of Categories
-Render all sites taxonomies
+  Render all sites taxonomies
+
 ```go
 <ul>
   {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
@@ -113,13 +120,14 @@ Render all sites taxonomies
         {{ end }}
       </ul>
       {{ end }}
-
     </ul>
   </li>
+  {{ end }}
 </ul>
-{{ end }}
 ```
+
 Show a list of categories with counts of articles on each category.
+
 ```go
 {{ range $name, $items := .Site.Taxonomies.categories }}
 <li>
@@ -132,7 +140,8 @@ Show a list of categories with counts of articles on each category.
 ```
 
 - List of Tags
-Show a list of tags.
+  Show a list of tags.
+
 ```go
 {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
 <a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
@@ -140,89 +149,83 @@ Show a list of tags.
 ```
 
 ### Nested menus
+
 Link: https://bwaycer.github.io/hugo_tutorial.hugo/extras/menus/
 This following example code renders the words [Is], [Has], and [Children] to demonstrate how the **IsMenuCurrent(), HasMenuCurrent(), and HasChildren()** functions work.
 
 ```html
-
 <!-- 1. Inside layouts/index.html, layouts/_default/single.html, ... -->
 <h1>{{ .Title }}</h1>
 
 <!-- 2. Put this line in your main template, at the place where 
         you want to render the menu. -->
-{{ partial "menu_include.html" . }} 
+{{ partial "menu_include.html" . }}
 
 <!-- 3. Inside layouts/partials/menu_include.html -->
-{{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . "site" .Site) }}
+{{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . "site" .Site)
+}}
 
 <!-- 4. layouts/partials/menu_recursive.html -->
-{{ $page := .page }}
-{{ $site := .site }}
+{{ $page := .page }} {{ $site := .site }}
 <ul>
-{{ range .menu }}
-  {{ $is := $page.IsMenuCurrent "main" . }}
-  {{ $has := $page.HasMenuCurrent "main" . }}
-  {{ if .HasChildren }} 
-    <li>
-      <a href="{{ .URL }}">
-        {{ .Name }}
-        {{ if $is }}[Is]{{ end }}
-        {{ if $has }}[Has]{{ end }}
-        {{ if .HasChildren }}[Children]{{ end }}
-      </a>
-        <!-- If the menu item has children, 
+  {{ range .menu }} {{ $is := $page.IsMenuCurrent "main" . }} {{ $has :=
+  $page.HasMenuCurrent "main" . }} {{ if .HasChildren }}
+  <li>
+    <a href="{{ .URL }}">
+      {{ .Name }} {{ if $is }}[Is]{{ end }} {{ if $has }}[Has]{{ end }} {{ if
+      .HasChildren }}[Children]{{ end }}
+    </a>
+    <!-- If the menu item has children, 
              include this partial template again (recursively) -->
-        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "site" $site) }}
-    </li>
+    {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "site"
+    $site) }}
+  </li>
   {{ else }}
-    <li>
-      <a href="{{ .URL }}">
-        {{ .Name }}
-        {{ if $is }}[Is]{{ end }}
-        {{ if $has }}[Has]{{ end }}
-        {{ if .HasChildren }}[Children]{{ end }}
-      </a>
-    </li>
-  {{ end }}
-{{ end }}
+  <li>
+    <a href="{{ .URL }}">
+      {{ .Name }} {{ if $is }}[Is]{{ end }} {{ if $has }}[Has]{{ end }} {{ if
+      .HasChildren }}[Children]{{ end }}
+    </a>
+  </li>
+  {{ end }} {{ end }}
 </ul>
 ```
+
 The previous menu rendered with some conditionals:
 
 ```html
 <!-- 5. layouts/partials/menu_recursive.html -->
-{{ $page := .page }}
-{{ $site := .site }}
+{{ $page := .page }} {{ $site := .site }}
 <ul>
-<!-- Menu items sorted alphabetically by name -->
-{{ range .menu.ByName }}
-  {{ $is := $page.IsMenuCurrent "main" . }}
-  {{ $has := $page.HasMenuCurrent "main" . }}
-  {{ if .HasChildren }} 
-    <li>
+  <!-- Menu items sorted alphabetically by name -->
+  {{ range .menu.ByName }} {{ $is := $page.IsMenuCurrent "main" . }} {{ $has :=
+  $page.HasMenuCurrent "main" . }} {{ if .HasChildren }}
+  <li>
     <!-- Highlight the current item, by applying a conditional CSS style -->
-      <a href="{{ .URL }}" class="{{ if $is }} active{{ end }}{{ if $has }} parent-active{{ end }}">
-        {{ .Name }}
-        <!-- Show a » symbol if there is a sub-menu we haven't rendered -->
-        {{ if not (or $is $has) }}»{{ end }}
-      </a>
-      <!-- Only render sub-menu for parent items and the current item -->
-      {{ if or $is $has }}
-        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "site" $site) }}
-      {{ end }}
-    </li>
+    <a
+      href="{{ .URL }}"
+      class="{{ if $is }} active{{ end }}{{ if $has }} parent-active{{ end }}"
+    >
+      {{ .Name }}
+      <!-- Show a » symbol if there is a sub-menu we haven't rendered -->
+      {{ if not (or $is $has) }}»{{ end }}
+    </a>
+    <!-- Only render sub-menu for parent items and the current item -->
+    {{ if or $is $has }} {{ partial "menu_recursive.html" (dict "menu" .Children
+    "page" $page "site" $site) }} {{ end }}
+  </li>
   {{ else }}
-    <li>
-      <a href="{{ .URL }}" class="{{ if $is }}active{{end}}">{{ .Name }}</a>
-    </li>
-  {{ end }}
-{{ end }}
+  <li>
+    <a href="{{ .URL }}" class="{{ if $is }}active{{end}}">{{ .Name }}</a>
+  </li>
+  {{ end }} {{ end }}
 </ul>
-
 ```
 
 ### Recent posts with "timeago"
+
 To show the most recent three posts with dates in format 9 hours ago, 3 days ago etc. Install "timeago" javascript plugin. In hugo insert this in your theme.
+
 ```go
 {{ range first 3 .Site.Pages }}
 <div>
@@ -232,9 +235,10 @@ To show the most recent three posts with dates in format 9 hours ago, 3 days ago
 {{ end }}
 ```
 
-
 ### Taged posts
-To show a list of posts for a specific tag. In this case I have a tag named "featured". 
+
+To show a list of posts for a specific tag. In this case I have a tag named "featured".
+
 ```go
 {{ range .Site.Taxonomies.tags.featured }}
 <div>
@@ -245,8 +249,10 @@ To show a list of posts for a specific tag. In this case I have a tag named "fea
 ```
 
 ### First and After
+
 You can combine first and after to make a more complicated query.
-Render 3 featured posts after skipping the first one. Also render a featured_image that was in the content markdown in the front matter. 
+Render 3 featured posts after skipping the first one. Also render a featured_image that was in the content markdown in the front matter.
+
 ```go
   {{ range after 1 (first 3 .Site.Taxonomies.tags.featured) }}
 <div>
@@ -259,7 +265,9 @@ Render 3 featured posts after skipping the first one. Also render a featured_ima
 ```
 
 ### Upcoming events (or posts)
+
 In the first case, the only future dated posts on the site are events, so we just query for pages with a date greater than now. We set this in a variable so that I can check if it is empty and display a message if it is. Otherwise, we just iterate through and display upcoming items.
+
 ```go
   {{ $upcoming := where .Site.RegularPages ".Date" "ge" now }}
 {{ if ne (len $upcoming) 0 }}
@@ -272,7 +280,9 @@ In the first case, the only future dated posts on the site are events, so we jus
 ```
 
 ### Select only pages of a section
+
 The query for past events is a little trickier since we need to select only pages in the events section. In this case, we just need to nest our where functions.
+
 ```go
 { $recorded := where (where .Site.RegularPages ".Date" "le" now) "Section" "events" }}
 {{ if ne (len $recorded) 0 }}
@@ -285,7 +295,9 @@ The query for past events is a little trickier since we need to select only page
 ```
 
 ### Access a Params value inside a loop.
-If you are inside of a loop you need to add $ to the beginning of .Params to access the value. http://stackoverflow.com/questions/16734503/access-out-of-loop-value-inside-golang-templates-loop 
+
+If you are inside of a loop you need to add \$ to the beginning of .Params to access the value. http://stackoverflow.com/questions/16734503/access-out-of-loop-value-inside-golang-templates-loop
+
 ```go
 {{ with .Params.some_variable }}
   {{ with $.Params.some_other_variable }}{{ . }}{{ end }}{{ . }}
@@ -293,18 +305,22 @@ If you are inside of a loop you need to add $ to the beginning of .Params to acc
 ```
 
 ### To tell if some value doesn’t exist.
+
 ```go
 {{ if (not (isset .Params "some_variable")) }}Value not found{{ end }}
 ```
 
 ### Command useful for debugging
+
 ```go
 {{ printf "%#v" $.Site }}
 ```
 
-### Related links 
+### Related links
+
 Show 3 related links to a story based on similar tags.
-https://discuss.gohugo.io/t/show-a-list-of-related-content/1488/5 
+https://discuss.gohugo.io/t/show-a-list-of-related-content/1488/5
+
 ```go
 {{ $page_link := .Permalink }}
 {{ $categories := .Params.categories }}
@@ -312,7 +328,7 @@ https://discuss.gohugo.io/t/show-a-list-of-related-content/1488/5
 {{ $has_common_categories := intersect $categories .Params.categories | len | lt 0 }}
 {{ if and $has_common_categories (ne $page_link $page.Permalink) (lt ($.Scratch.Get "$c") 3)}}
 {{ $.Scratch.Add "$c" 1 }}
- <a href="{{ $page.Permalink }}">{{ $page.Title }}</a> 
+ <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
 <h5>{{ $page.Description }}</h5>
 <hr>
 {{ end }}
@@ -320,19 +336,23 @@ https://discuss.gohugo.io/t/show-a-list-of-related-content/1488/5
 ```
 
 ### Related posts
+
 Hugo has built-in support for [related content](https://gohugo.io/content-management/related/). It includes default configuration for how it determines if an item is related, but we can customize it within `config.yaml`. The key difference was that we relied primarily on the categories property of each page to determine if it was related and we wanted to include newer pages as we would like to recommend the current event, for instance, if we are viewing a related older event.
+
 ```yaml
 related:
   threshold: 80
   includeNewer: true
   toLower: false
   indices:
-  - name: categories
-    weight: 100
-  - name: date
-    weight: 10
+    - name: categories
+      weight: 100
+    - name: date
+      weight: 10
 ```
+
 Then display the top five related pages to the current page.
+
 ```go
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
@@ -341,7 +361,8 @@ Then display the top five related pages to the current page.
 {{ end }}
 ```
 
-### Show multiple authors with special attributes. 
+### Show multiple authors with special attributes.
+
 This solution needs a data/authors directory in the root of your theme.Inside this directory put a file title it the same as the author’s name you want to use (very important to be exactly the same way you capitalize your author’s name in your front matter). So if your name was “John Doe”, the data file would be “John Doe.toml”. In the data file you can put the info you want about each author.
 
 ```go
@@ -352,7 +373,7 @@ This solution needs a data/authors directory in the root of your theme.Inside th
     location = "Normal, Il"
     website = "http://example.com"
     thumbnail = "/images/john.jpg"
-    
+
     <!-- Start of post author -->
     {{ if not .Params.noauthor }}
     {{$author := index .Site.Data.authors (or .Params.author .Site.Params.author)}}
@@ -377,8 +398,9 @@ This solution needs a data/authors directory in the root of your theme.Inside th
     <!-- End of post author -->
 ```
 
-### Use a different template in _default/single.html 
-Add at the top of the file: 
+### Use a different template in \_default/single.html
+
+Add at the top of the file:
 
 ```go
   {{ if .Params.page_template }}
@@ -388,7 +410,7 @@ Add at the top of the file:
   {{ end }}
 ```
 
-   Then in partials/page/ create your new template file. As an example contact.html. Finally call this file in a regular content file called contact.html. In your front matter of your contact.html add a new parameter for your custom template.
+Then in partials/page/ create your new template file. As an example contact.html. Finally call this file in a regular content file called contact.html. In your front matter of your contact.html add a new parameter for your custom template.
 
 ```yaml
   ___
@@ -397,12 +419,16 @@ Add at the top of the file:
 ```
 
 ### Basic Pagination
-Hugo provides configuration and an object `(.Paginator)` to assist in [pagination](https://gohugo.io/templates/pagination/). The default number of items on a paginated list page is 10, but in this case we only wanted 5. 
+
+Hugo provides configuration and an object `(.Paginator)` to assist in [pagination](https://gohugo.io/templates/pagination/). The default number of items on a paginated list page is 10, but in this case we only wanted 5.
 In order to do that, we change the setting in `config.yaml`
+
 ```yaml
 paginate: 5
 ```
+
 We show the navigation if there was more than one page, the back button only if there were previous pages and the forward button only if there were subsequent pages. Finally, the current page would have different styling and not be linked.
+
 ```go
 {{ if gt .Paginator.TotalPages 1}}
   // <!-- Pagination -->
@@ -425,13 +451,16 @@ We show the navigation if there was more than one page, the back button only if 
   {{ end }}
 </div>
 ```
+
 The first line of the above code checks if we have more than one total pages. **.Paginator.HasPrev** is used to determine if a previous paginated page exists and **.Paginator.HasNext** if a next page exists. Likewise **.Paginator.Prev** contains the preceding paginated page object and **.Paginator.Next** the next page object. **.Paginator.Pagers** contains all of the paginated pages to iterate through.
 
-We assign a variable in `{{ $paginator := .Paginator }}` to compare **.PageNumber** of the paginated page object with the page number of the current page object, to change classes and properly highlight the current page on the navigation. 
+We assign a variable in `{{ $paginator := .Paginator }}` to compare **.PageNumber** of the paginated page object with the page number of the current page object, to change classes and properly highlight the current page on the navigation.
 
 ### Next-prev navigation
+
 Navigate to previous and next post.
 **.PrevInSection** returns the page object for the previous page within the same site section. If it doesn't exist, it will be null (nil in the case of Go). The with **.PrevInSection** simply allows me to use the shorthand dot-notation for the object properties (i.e. use .Permalink rather than .PrevInSection.Permalink).
+
 ```go
 // <!-- Prev / Next Post -->
 <nav class="entry-navigation">
@@ -459,5 +488,5 @@ Navigate to previous and next post.
     </div>
     {{ end }}
     </div>
-</nav> 
+</nav>
 ```
