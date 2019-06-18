@@ -1,11 +1,9 @@
 {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
 
-<div class="page-content">
-	<h2>{{ .Page.Title }}</h2>
-	{{ .Content }}
-</div>
+<div id="main">
 
-<div class="page-content">
+	<h2>Page title: {{ .Page.Title }}</h2>
+	{{ .Content }}
 
 	{{ partial "menu" . }}
 
@@ -21,18 +19,6 @@
 		</div>
 		{{/*  created date  */}}
 		<div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-
-		{{/*  tags  */}}
-		<div>
-			{{ if .Params.tags }}
-			<strong>Tags:</strong>
-			{{ range .Params.tags }}
-			<a href="{{ "/tags/" | relLangURL }}{{ "/" }}{{ . | urlize }}">
-				{{ . }}
-			</a>
-			{{end}}
-			{{end}}
-		</div>
 
 		{{/*  categories  */}}
 		<div>
@@ -54,6 +40,18 @@
 			{{end}}
 		</div>
 
+		{{/*  tags  */}}
+		<div>
+			{{ if .Params.tags }}
+			<strong>Tags:</strong>
+			{{ range .Params.tags }}
+			<a href="{{ "/tags/" | relLangURL }}{{ "/" }}{{ . | urlize }}">
+				{{ . }}
+			</a>
+			{{end}}
+			{{end}}
+		</div>
+
 		{{/*  summary  */}}
 		<p class="summary">
 			<a href="{{ .Permalink }}">{{ .Summary }}</a>
@@ -61,6 +59,16 @@
 
 	</section>
 	{{ end }}
+
+	{{/*  <h3> List categories with counts of articles on each category.</h3>
+	{{ range $name, $items := .Site.Taxonomies.categories }}
+	<p>
+		<a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">
+			- {{ $name }} &nbsp;
+			<span>({{ len $items }})</span>
+		</a>
+	</p>
+	{{ end }} */}}
 
 </div>
 
