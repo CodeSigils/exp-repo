@@ -17,12 +17,12 @@
   --colors-sand-white   : #e0dfcd;
   --fonts-family-main   : Helvetica, 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
     Ubuntu, Cantarell, 'Helvetica Neue',  'Open Sans', Arial, sans-serif;
-  --fonts-p-nm          : 135%;
-  --fonts-p-lg          : 148%;
-  --fonts-h2-nm         : 115%;
-  --fonts-h2-lg         : 300%;
-  --fonts-h1-nm         : 115%;
-  --fonts-h1-lg         : 300%;
+  --fonts-p             : 125%;
+  --fonts-p-lrg         : 148%;
+  --fonts-h2            : 115%;
+  --fonts-h2-lrg        : 300%;
+  --fonts-h1            : 115%;
+  --fonts-h1-lrg        : 300%;
   --fonts-h1-title      : 400%;
   --img-header          : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
   --img-pattern         : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/patterns/topography.png');
@@ -55,7 +55,7 @@
 
 /*--- Paragraphs-Emphasis-Title ---*/
 p {
-  font-size: var(--fonts-p-nm);
+  font-size: var(--fonts-p);
 }
 .em-text {
   color: var(--colors-sea-green, #1a9181) !important;
@@ -83,10 +83,10 @@ p {
   margin-bottom: 30px;
 }
 #prologue h1 {
-  font-size: var(--fonts-h1-lg);
+  font-size: var(--fonts-h1-lrg);
 }
 #prologue p {
-  font-size: var(--fonts-p-lg);
+  font-size: var(--fonts-p-lrg);
 }
 
 /*--- Articles ---*/
@@ -96,7 +96,7 @@ article {
 }
 article h2 {
   display: block;
-  font-size: var(--fonts-h2-lg);
+  font-size: var(--fonts-h2-lrg);
 }
 article img {
   margin-bottom: 10px;
@@ -115,7 +115,7 @@ img {
   width: var(--img-width);
 }
 .img-moebius {
-  width: 250px;
+  width: 300px;
 }
 .img-full {
   width: 100%;
