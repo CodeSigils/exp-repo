@@ -1,7 +1,7 @@
 {{ partial "header" (dict "Kind" .Kind "Template" "Single") }}
 
 <div id="main">
-	<h1>{{.Title}}</h1>
+	<h1>Page Title: {{.Title}}</h1>
 	<div>
 		{{ dateFormat "Monday, Jan 2, 2006" .Date }}
 	</div>
@@ -9,7 +9,7 @@
 		{{if .Params.author}}Author: {{.Params.Author}}{{end}}
 	</div>
 	<div style="font-size:18px;">
-		{{.Content}}
+		<h3>Page Content: </h3>{{.Content}}
 	</div>
 </div>
 
