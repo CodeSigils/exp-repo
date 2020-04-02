@@ -1,305 +1,661 @@
-<!-- 
-	FreeCodeCamp assignment 
-	-- Tribute page 
-	-- https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-tribute-page
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+	FreeCodeCamp assignment -- Tribute page 
+	- https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-tribute-page
 -->
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Moebius - Tribute page</title>
-	<!-- main bootstrap css -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"
-		crossorigin="anonymous" />
-	<!--
-		font awesome REMOVE FOR CODEPEN 
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
-		type="text/css" crossorigin="anonymous" />
-	-->
-	<!--
-		custom css REMOVE FOR CODEPEN 
-	-->
-	<link rel="stylesheet" href="./css/main.css">
-	<!-- lazy img load: https://github.com/aFarkas/lazysizes -->
-	<script src="http://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moebius - Tribute page</title>
+    <!-- main bootstrap css -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
 
-<body>
-	<div id="main">
+    <!-- lazy img loading: https://github.com/aFarkas/lazysizes -->
+    <script
+      src="https://afarkas.github.io/lazysizes/lazysizes.min.js"
+      async=""
+    ></script>
+  </head>
 
-	<!-- .navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a id="home" class="navbar-brand em-text" href="#prologue">
-					Mœbius
-				</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse"></div>
-			<!-- /.nav-collapse -->
-		</div>
-	</nav>
+  <body>
+    <div id="main">
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <!-- .navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a id="home" class="navbar-brand em-text" href="#prologue">
+              Mœbius
+            </a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse"></div>
+          <!-- /.nav-collapse -->
+        </div>
+      </nav>
 
-	<!-- Title - Jumbotron -->
-	<div class="jumbotron lazyload">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h1 id="title">Jean <span class="em-text">Giraud</span></h1>
-					<p>8 May 1938 – 10 March 2012</p>
-				</div>
-			</div>
-		</div>
-	</div>
+      <!-- Title - Jumbotron -->
+      <div class="jumbotron lazyload">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 id="title">Jean <span class="em-text">Giraud</span></h1>
+              <p>8 May 1938 - 10 March 2012</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-	<!-- Main page container -->
-	<div class="container">
+      <!-- Main page container -->
+      <div class="container">
+        <!-- Prologue tribute-info -->
+        <div class="row">
+          <div class="container">
+            <div id="tribute-info" class="col-md-12">
+              <h1>
+                Voyages in a sea of<span class="em-text"> color</span> &amp; ink
+              </h1>
+              <p>
+                <strong>Jean Henri Gaston Giraud</strong> was a French artist,
+                cartoonist and writer <br />who worked in the Franco-Belgian
+                bandes dessinées tradition.<br />Giraud gained fame worldwide
+                under the pseudonym
+                <a
+                  href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams/"
+                  alt="moebius and the key of dreams"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong> Mœbius</strong>
+                </a>
+                <br />which he used for his paintings. Esteemed by
+                <strong
+                  >Federico Fellini,<br />Stan Lee and Hayao Miyazaki</strong
+                >
+                among others, he has been described<br />as the most influential
+                bandes dessinées artist after Hergé.
+              </p>
+            </div>
+          </div>
+        </div>
 
-		<!-- Prologue -->
-		<div class="row">
-			<div class="container">
-				<div id="prologue" class="col-md-12">
-					<h1>Voyages in a sea of<span class="em-text"> color</span> &amp; ink</h1>
-					<p>
-						<strong>Jean Henri Gaston Giraud</strong> was a French artist, cartoonist and writer <br />who worked in
-						the Franco-Belgian bandes dessinées tradition.<br />Giraud gained fame worldwide under the pseudonym
-						<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams/" alt="moebius and the key of dreams" target="_blank">
-							<strong> Mœbius</strong>
-						</a>
-						<br />which he used for his paintings. Esteemed by <strong>Federico Fellini,<br />Stan Lee
-						and Hayao Miyazaki</strong> among others, he has been described<br />as the most influential bandes dessinées artist
-						after Hergé.
-					</p>
-				</div>
-			</div>
-		</div>
+        <!-- Articles -->
+        <div class="col-md-12">
+          <div class="row">
+            <!-- 01 Early life -->
+            <article>
+              <!-- Article title and figure image-->
+              <h2>Early life &amp; Westerns</h2>
+              <a
+                id="tribute-link"
+                href="https://youtu.be/ht99pxnqGUs"
+                target="_blank"
+                rel="noopener"
+                alt="Jean Giraud BBC documentary"
+              >
+                <figure id="img-div">
+                  <img
+                    id="image"
+                    class="img-moebius img-left img-responsive lazyload"
+                    data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius.jpg"
+                    alt="moebius portrait photo"
+                  />
+                  <figcaption id="img-caption">
+                    A Documentary on legendary comic <br />
+                    book artist and movie visionary, Moebius.
+                  </figcaption>
+                </figure>
+              </a>
+              <!-- Article paragraph text -->
+              <p>
+                <a
+                  href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong>Mœbius</strong> (Jean Giraud)
+                </a>
+                was born in
+                <a
+                  href="https://duckduckgo.com/?q=Nogent-sur-Marne%2C+Val-de-Marne&t=ffcm&ia=web&iax=about&iaxm=about"
+                  target="_blank"
+                  alt="Nogent-sur-Marne online map"
+                  rel="noopener"
+                >
+                  Nogent-sur-Marne, Val-de-Marne</a
+                >, in the suburbs of Paris, on 8 May 1938. <br />
+                In 1954 at age 16, he began his only technical training at the
+                <a href="https://duperre.org/" target="_blank" rel="noopener">
+                  École Supérieure des Arts Appliqués Duperré </a
+                >, where he, unsurprisingly, started producing Western comics,
+                which however did not sit well with his teachers.
+              </p>
+              <a
+                href="https://www.lambiek.net/artists/g/giraud.htm"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="img-right lazyload"
+                  data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius_western.jpg"
+                  alt="western comic by artist Giraud"
+                />
+              </a>
 
-		<!-- Articles -->
-		<div class="col-md-12">
-			<div class="row">
+              <p>
+                At 18, Giraud was drawing his own comic Western strip, "Frank et
+                Jeremie", for the magazine "Far West", his very first commercial
+                sale. From <strong>1956 to 1958</strong> he published Western
+                comics, alongside several others of a French historical nature,
+                in the magazines "Fripounet et Marisette", "Coeurs Valiants" and
+                "Ames Valliantes" - all from catholic publisher Fleurus, and all
+                of them of a strong edifying nature aimed at France's adolescent
+                youth - , among them a strip called
+                <strong>"King of the Buffalo"</strong>, and another called
+                <strong>"A Giant with the Hurons".</strong> It was for Fleurus
+                that Giraud also illustrated his first three books. Already in
+                this period his style was heavily influenced by his later
+                mentor,
+                <a
+                  href="https://www.lambiek.net/artists/j/jije.htm"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <strong>Joseph "Jijé" Gillain</strong>.
+                </a>
+              </p>
+              <p>
+                In 1961, returning from military service, Giraud became an
+                apprentice of Jijé, who was one of the leading comic artists in
+                Europe of the time. In his period, Jijé used Giraud as his
+                assistant on an album of his Western series Jerry Spring,
+                <strong>"The Road to Coronado"</strong>, which Giraud inked.
+              </p>
+            </article>
+          </div>
+          <!-- /.row -->
 
-				<!-- 01 Early life -->
-				<article>
-					<h2>Early life &amp; Westerns</h2>
-					<p>
-						<a href="https://youtu.be/ht99pxnqGUs"
-							target="_blank" alt="Jean Giraud BBC documentary">
-							<img class="img-moebius img-left img-responsive lazyload"
-								data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius.jpg"
-								alt="moebius portrait photo"
-								/>
-						</a>
-						<a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams" target="_blank">
-							<strong>Mœbius</strong> (Jean Giraud)
-						</a>
-						was born in <a href="https://duckduckgo.com/?q=Nogent-sur-Marne%2C+Val-de-Marne&t=ffcm&ia=web&iax=about&iaxm=about" target="_blank" alt="Nogent-sur-Marne online map"> Nogent-sur-Marne, Val-de-Marne</a>, in the suburbs of Paris,
-						on 8 May 1938. <br /> In 1954 at age 16, he began his only technical training at the
-						<a href="https://duperre.org/" target="_blank"> École Supérieure des Arts Appliqués Duperré </a>, where he,
-						unsurprisingly, started producing Western comics, which however did not sit well with his teachers.
-					</p>
-					<a href="https://www.lambiek.net/artists/g/giraud.htm" target="_blank">
-						<img class="img-right lazyload"
-							data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius_western.jpg"
-							alt="western comic by artist Giraud" />
-					</a>
-					<p>
-						At 18, Giraud was drawing his own comic Western strip, "Frank et Jeremie", for the magazine "Far West", his
-						very first commercial sale. From <strong>1956 to 1958</strong> he published Western comics, alongside
-						several others of a French historical nature, in the magazines "Fripounet et Marisette", "Coeurs Valiants"
-						and "Ames Valliantes" – all from catholic publisher Fleurus, and all of them of a strong edifying nature
-						aimed at France's adolescent youth – , among them a strip called <strong>"King of the Buffalo"</strong>, and
-						another called <strong>"A Giant with the Hurons".</strong> It was for Fleurus that Giraud also illustrated
-						his first three books. Already in this period his style was heavily influenced by his later mentor,
-						<a href="https://www.lambiek.net/artists/j/jije.htm" target="_blank">
-							<strong>Joseph "Jijé" Gillain</strong>.
-						</a>
-					</p>
-					<p>
-						In 1961, returning from military service, Giraud became an apprentice of Jijé, who was one of the leading
-						comic artists in Europe of the time. In his period, Jijé used Giraud as his assistant on an album of his
-						Western series Jerry Spring, <strong>"The Road to Coronado"</strong>, which Giraud inked.
-					</p>
-				</article>
+          <!-- 02 Sci-fi -->
+          <article>
+            <h2>Science fiction and fantasy</h2>
+            <p>
+              <a
+                href="https://www.humanoids.com/"
+                target="_blank"
+                alt="Moebius tribute article"
+                rel="noopener"
+              >
+                <img
+                  class="img-right img-responsive lazyload"
+                  data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/Jodoverse_defaultbody.jpg"
+                  alt="The humanoids society comic books"
+                />
+              </a>
+              In 1975 with
+              <a
+                href="https://www.lambiek.net/artists/d/dionnet_jean-pierre.htm"
+                target="_blank"
+                rel="noopener"
+                alt="Jean-Pierre Dionnet"
+                >Jean-Pierre Dionnet</a
+              >,
+              <a
+                href="https://www.lambiek.net/artists/d/druillet.htm"
+                target="_blank"
+                rel="noopener"
+                alt="artist Philippe Druillet"
+                >Philippe Druillet</a
+              >
+              and Bernard Farkas, he became one of the founding members of the
+              comics art group
+              <a
+                href="http://www.humano.com/"
+                target="_blank"
+                rel="noopener"
+                alt="Les Humanoïdes Associés"
+                >"Les Humanoïdes Associés" (French site)</a
+              >
+              -
+              <a
+                href="https://www.humanoids.com/"
+                target="_blank"
+                rel="noopener"
+                alt="The humanoids society"
+              >
+                "The humanoids society" (english site).</a
+              >
+              Together they started the legendary magazine
+              <a
+                href="https://tomlennon.com/metal-hurlant-the-french-comic-that-changed-the-world/"
+                target="_blank"
+                rel="noopener"
+                alt="Métal Hurlant: the French comic that changed the world"
+                >Métal hurlant</a
+              >, and for which he had temporarily abandoned his Blueberry
+              series. The magazine known in the English-speaking world as
+              <strong>Heavy Metal</strong>. Mœbius' famous serial
+              <a
+                href="https://www.goodreads.com/book/show/270759.The_Collected_Fantasies_Vol_3"
+                target="_blank"
+                rel="noopener"
+                alt="The Airtight Garage by Moebius"
+              >
+                <strong>The Airtight Garage</strong></a
+              >
+              and his groundbreaking
+              <a
+                href="https://pdsoasis.github.io/arzachcomics.html"
+                target="_blank"
+                rel="noopener"
+                alt="Arzach by Moebius"
+                ><strong>Arzach</strong>
+              </a>
+              both began in Métal
+              <a
+                href="https://tomlennon.com/metal-hurlant-the-french-comic-that-changed-the-world/"
+                target="_blank"
+                rel="noopener"
+                alt="Métal Hurlant: the French comic that changed the world"
+                >Métal hurlant</a
+              >.
+            </p>
+            <p>
+              <a
+                href="https://marvel.com/"
+                target="_blank"
+                rel="noopener"
+                alt="Marvel Comics"
+                ><strong>Marvel Comics:</strong></a
+              >
+              A two-issue Silver Surfer miniseries (later collected as "Silver
+              Surfer: Parable"), written by
+              <a
+                href="http://therealstanlee.com/"
+                alt="Stan Lee"
+                target="_blank"
+                ><strong>Stan Lee</strong></a
+              >
+              and drawn by Giraud (as Mœbius), was published through Marvel's
+              Epic Comics imprint in 1988 and 1989. According to Giraud, this
+              was his first time working under the Marvel method instead of from
+              a full script. This miniseries won the
+              <a
+                href="https://www.comic-con.org/awards/will-eisner"
+                target="_blank"
+                rel="noopener"
+                alt="Eisner Award"
+                >Eisner Award</a
+              >
+              for best finite/limited series in 1989.
+            </p>
+          </article>
 
-			</div><!-- /.row -->
+          <!-- 03 Arzach -->
+          <article>
+            <h2>Arzach</h2>
+            <p>
+              <a
+                href="http://pdsoasis.github.io/arzachcomics.html"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="img-full img-responsive lazyload"
+                  data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/arzach_01.jpg"
+                  alt="Arzach"
+              /></a>
+              <a
+                href="https://comicvine.gamespot.com/arzach/4005-16697/images/"
+                target="_blank"
+                rel="noopener"
+                alt="Arzach by Moebius"
+              >
+                <strong>Arzach</strong></a
+              >
+              is a wordless comic, created in a conscious attempt to breathe new
+              life into the comic genre which at the time was dominated by
+              American superhero comics. It tracks the journey of the title
+              character flying on the back of his pterodactyl through a
+              fantastic world mixing
+              <a
+                href="https://everydaymoebius.tumblr.com/"
+                target="_blank"
+                alt="Moebius art at tumblr.com"
+              >
+                medieval fantasy with futurism.</a
+              ><br />Unlike most science fiction comics, it has no captions, no
+              speech balloons and no written sound effects. It has been argued
+              that the wordlessness provides the strip with a sense of
+              timelessness, setting up Arzach's journey as a quest for
+              <a
+                href="https://youtu.be/501zclIUQBQ"
+                alt="Moebius interview"
+                target="_blank"
+              >
+                eternal, universal truths.</a
+              >
+            </p>
+          </article>
 
-			<!-- 02 Sci-fi -->
-			<article>
-				<h2>Science fiction and fantasy</h2>
-				<p>
-					<a href="https://www.humanoids.com/" target="_blank" alt="Moebius tribute article">
-						<img class="img-right img-responsive lazyload"
-							data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/Jodoverse_defaultbody.jpg"
-							alt="The humanoids society comic books" />
-					</a>
-					In 1975 with <a href="https://www.lambiek.net/artists/d/dionnet_jean-pierre.htm" target="_blank"
-						alt="Jean-Pierre Dionnet">Jean-Pierre Dionnet</a>, <a href="https://www.lambiek.net/artists/d/druillet.htm"
-						target="_blank" alt="artist Philippe Druillet">Philippe Druillet</a> and Bernard Farkas, he became one of the founding members of the comics art group <a href="http://www.humano.com/" target="_blank" alt="Les Humanoïdes Associés">"Les Humanoïdes Associés" (French site)</a> - <a href="https://www.humanoids.com/" target="_blank"
-						alt="The humanoids society"> "The humanoids society" (english site).</a> Together they
-					started the legendary magazine <a href="https://tomlennon.com/metal-hurlant-the-french-comic-that-changed-the-world/"
-					 target="_blank" alt="Métal Hurlant: the French comic that changed the world">Métal hurlant</a>, and for which he had temporarily abandoned his Blueberry series. The magazine known in the English-speaking world as <strong>Heavy Metal</strong>. Mœbius' famous serial
-					<a href="https://www.goodreads.com/book/show/270759.The_Collected_Fantasies_Vol_3" target="_blank"
-						alt="The Airtight Garage by Moebius">
-						<strong>The Airtight Garage</strong></a> and his groundbreaking
-					<a href="https://pdsoasis.github.io/arzachcomics.html" target="_blank"
-						alt="Arzach by Moebius"><strong>Arzach</strong>
-					</a> both began in Métal <a href="https://tomlennon.com/metal-hurlant-the-french-comic-that-changed-the-world/"
-					target="_blank" alt="Métal Hurlant: the French comic that changed the world">Métal hurlant</a>.
-				</p>
-				<p>
-					<a href="https://marvel.com/" target="_blank" alt="Marvel Comics"><strong>Marvel Comics:</strong></a> A
-					two-issue Silver Surfer miniseries (later collected as "Silver Surfer: Parable"), written by
-					<a href="http://therealstanlee.com/" alt="Stan Lee" target="_blank"><strong>Stan Lee</strong></a> and drawn by
-					Giraud (as Mœbius), was published through Marvel's Epic Comics imprint in 1988 and 1989. According to Giraud,
-					this was his first time working under the Marvel method instead of from a full script. This miniseries won the
-					<a href="https://www.comic-con.org/awards/will-eisner" target="_blank" alt="Eisner Award">Eisner Award</a> for
-					best finite/limited series in 1989.
-				</p>
-			</article>
+          <!-- 04 The Airtight Garage -->
+          <article>
+            <h2>The Airtight Garage</h2>
+            <p>
+              <a
+                href="https://comicvine.gamespot.com/major-grubert/4005-28651/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="img-right img-responsive lazyload"
+                  data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius-hunter.jpeg"
+                  alt="The Airtight Garage"
+                />
+              </a>
+              His series
+              <a
+                href="https://www.goodreads.com/book/show/270759.The_Collected_Fantasies_Vol_3"
+                target="_blank"
+                rel="noopener"
+                alt="The Airtight Garage by Moebius"
+                ><strong>The Airtight Garage</strong></a
+              >
+              is particularly notable for its non-linear
+              <a
+                href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams"
+                target="_blank"
+                rel="noopener"
+                alt="Moebius and the key of dreams article from the Paris review"
+                >dream-like</a
+              >
+              plot, where movement and temporality can be traced in multiple
+              directions depending on the readers own interpretation even within
+              a single planche (page or picture). The series tells of
+              <a
+                href="https://comicvine.gamespot.com/major-grubert/4005-28651/"
+                alt="Major Grubert comic character"
+                target="_blank"
+                rel="noopener"
+                ><strong>Major Grubert</strong></a
+              >, who discovered the secret of immortality, and is constructing
+              his own universe on an Asteroid named fleur, where he encounters a
+              wealth of fantastic characters including
+              <a
+                href="https://www.goodreads.com/author/show/16939.Michael_Moorcock"
+                target="_blank"
+                rel="noopener"
+                alt="Michael Moorcock author"
+                ><strong>Michael Moorcock's</strong></a
+              >
+              creation
+              <a
+                href="https://en.wikipedia.org/wiki/Jerry_Cornelius"
+                alt="Jerry Cornelius character"
+                target="_blank"
+                rel="noopener"
+              >
+                Jerry Cornelius </a
+              >.
+            </p>
+            <p>
+              The Airtight Garage was followed by
+              <strong>L'Homme du Ciguri (The Man from the Ciguri)</strong> in
+              1995 and
+              <a
+                href="https://www.priceminister.com/offer/buy/66770662/Le-Chasseur-Deprime-Tome-1-Livre.html"
+                alt="The Depressed Hunter"
+                target="_blank"
+                rel="noopener"
+              >
+                Le Chasseur Déprime in 2008.</a
+              >
+              The latter has never appeared in English, but the title translates
+              as "The Depressed Hunter". Some of the characters from these
+              stories also show up in the 1974 comic
+              <a
+                href="https://www.goodreads.com/book/show/13574240-le-bandard-fou"
+                alt="Le Bandard Fou comic book"
+                target="_blank"
+                rel="noopener"
+                >Le Bandard Fou (The Horny Goof)</a
+              >, which can be considered a prequel to The Airtight Garage.
+            </p>
 
-			<!-- 03 Arzach -->
-			<article>
-				<h2>Arzach</h2>
-				<p>
-					<a href="http://pdsoasis.github.io/arzachcomics.html" target="_blank">
-						<img class="img-full img-responsive lazyload"
-							data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/arzach_01.jpg"
-							alt="Arzach" /></a>
-					<a href="https://comicvine.gamespot.com/arzach/4005-16697/images/" target="_blank" alt="Arzach by Moebius">
-						<strong>Arzach</strong></a> is a wordless comic, created in a conscious attempt to breathe new life into
-					the comic genre which at the time was dominated by American superhero comics. It tracks the journey of the
-					title character flying on the back of his pterodactyl through a fantastic world mixing <a href="https://everydaymoebius.tumblr.com/" target="_blank" alt="Moebius art at tumblr.com"> medieval fantasy with futurism.</a><br />Unlike most science fiction comics, it has no captions, no speech balloons and no written sound effects. It has been argued that the wordlessness provides the strip with a sense of timelessness, setting up Arzach's journey as a quest for <a href="https://youtu.be/501zclIUQBQ" alt="Moebius interview" target="_blank">
-					eternal, universal truths.</a>
-				</p>
-			</article>
+            <iframe
+              class="img-left img-responsive video lazyload"
+              data-src="https://www.youtube.com/embed/5K7TWTKPrLg?showinfo=0"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
 
-			<!-- 04 The Airtight Garage -->
-			<article>
-				<h2>The Airtight Garage</h2>
-				<p>
-					<a href="https://comicvine.gamespot.com/major-grubert/4005-28651/"
-						target="_blank">
-						<img class="img-right img-responsive lazyload"
-							data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius-hunter.jpeg"
-							alt="The Airtight Garage" />
-					</a>
-					His series <a href="https://www.goodreads.com/book/show/270759.The_Collected_Fantasies_Vol_3" target="_blank"
-						alt="The Airtight Garage by Moebius"><strong>The Airtight Garage</strong></a> is particularly notable for
-					its non-linear <a href="https://www.theparisreview.org/blog/2015/10/21/moebius-and-the-key-of-dreams"
-						target="_blank" alt="Moebius and the key of dreams article from the Paris review">dream-like</a> plot, where movement
-						and temporality can be traced in multiple directions depending on the readers own interpretation even within a single
-						planche (page or picture). The series tells of <a href="https://comicvine.gamespot.com/major-grubert/4005-28651/" alt="Major Grubert comic character" target="_blank"><strong>Major Grubert</strong></a>, who discovered the secret of immortality, and is constructing his own universe on an Asteroid named fleur, where he encounters a wealth of fantastic characters including
-					<a href="https://www.goodreads.com/author/show/16939.Michael_Moorcock" target="_blank"
-						alt="Michael Moorcock author"><strong>Michael Moorcock's</strong></a> creation
-					<a href="https://en.wikipedia.org/wiki/Jerry_Cornelius" alt="Jerry Cornelius character" target="_blank">
-						Jerry Cornelius
-					</a>.
-				</p>
-				<p>
-					The Airtight Garage was followed by <strong>L'Homme du Ciguri (The Man from the Ciguri)</strong> in 1995 and
-					<a href="https://www.priceminister.com/offer/buy/66770662/Le-Chasseur-Deprime-Tome-1-Livre.html"
-						alt="The Depressed Hunter" target="_blank"> Le Chasseur Déprime in 2008.</a> The latter has never appeared
-					in English, but the title translates as "The Depressed Hunter". Some of the characters from these stories also
-					show up in the 1974 comic <a href="https://www.goodreads.com/book/show/13574240-le-bandard-fou"
-						alt="Le Bandard Fou comic book" target="_blank">Le Bandard Fou (The Horny Goof)</a>, which can be considered
-					a prequel to The Airtight Garage.
-				</p>
+            <p>
+              The hero of The Airtight Garage, Major Grubert, was also the
+              subject of some shorter comic-strip stories,
+              <a
+                href="https://www.pinterest.com/vmitsouko/moebius-jean-giraud/"
+                alt="moebius images in pinterest.com"
+                alt="moebius poster images on pinterest.com"
+                target="_blank"
+                rel="noopener"
+              >
+                poster images </a
+              >, and
+              <a
+                href="https://everydaymoebius.tumblr.com/"
+                alt="moebius poster images on tumblr.com"
+                target="_blank"
+                rel="noopener"
+              >
+                paintings</a
+              >
+              over the course of his creator's long career, and eventually
+              became the central character in an entire
+              sketchbook-as-graphic-novel entitled "Le Major", published in a
+              limited edition facsimile in 2011. Major Grubert and his lady
+              companion
+              <strong>Malvina</strong> also appear throughout the six-volume
+              Inside Moebius series (2000-2008).
+            </p>
+          </article>
 
-				<iframe class="img-left img-responsive video lazyload"
-					data-src="https://www.youtube.com/embed/5K7TWTKPrLg?showinfo=0" frameborder="0"
-					allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <!-- 05 The Incal -->
+          <article>
+            <h2>The Incal</h2>
+            <p>
+              <a
+                href="https://www.humanoids.com/y_page/pageShow/id/38"
+                target="_blank"
+                alt="The Incal book"
+                rel="noopener"
+              >
+                <img
+                  class="img-left img-responsive lazyload"
+                  data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/inkal-black-egg.jpg"
+                  alt="The Incal"
+                />
+              </a>
+              In 1980 he started his famous
+              <a
+                href="https://www.humanoids.com/y_page/pageShow/id/38"
+                target="_blank"
+                rel="noopener"
+                alt="The Incal series"
+                ><strong>L'Incal</strong></a
+              >, a
+              <a
+                href="https://comicvine.gamespot.com/lincal/4050-59696/"
+                target="_blank"
+                rel="noopener"
+              >
+                6 book series
+              </a>
+              in collaboration with
+              <a
+                href="https://comicvine.gamespot.com/alejandro-jodorowsky/4040-47011/"
+                alt="Alejandro Jodorowsky"
+                target="_blank"
+                rel="noopener"
+                ><strong>Alejandro Jodorowsky.</strong></a
+              >
+              From 1985 to 2001 he also created his six-volume fantasy series
+              <strong>"Le Monde d'Edena"</strong>, portions of which appeared in
+              English as
+              <a
+                href="https://doorofperception.com/2017/11/moebius-the-world-of-edena/"
+                alt="Le Monde d'Edena"
+                target="_blank"
+              >
+                <strong>The World of Aedena</strong></a
+              >
+              Cycle. The stories were strongly influenced by the teachings of
+              Jean-Paul Appel-Guéry.
+            </p>
+            <p>
+              The story of <strong>Incal</strong> is placed in the dystopian
+              capital city of an insignificant planet in a human-dominated
+              galactic empire, wherein the <strong>Bergs</strong>, aliens who
+              resemble featherless birds and reside in a neighboring galaxy,
+              make up another power block. It starts with
+              <a
+                href="https://comicvine.gamespot.com/john-difool/4005-16573/issues-cover/"
+                target="_blank"
+                >DiFool</a
+              >
+              tossed off by a masked group from the "Suicide Alley" down to the
+              great acid lake, luckily saved by a police cruiser.
+            </p>
+            <p>
+              <a
+                href="https://www.humanoids.com/y_page/pageShow/id/38"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="img-moebius img-right img-responsive lazyload"
+                  data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius-incal001-229x300.jpg"
+                  alt="The Incal cover image"
+                /> </a
+              >During the questioning he denied that he received the
+              <strong>Light Incal</strong>, a crystal of enormous and infinite
+              powers (it guides and protects those who believe in it, from a
+              dying Berg. The Incal is then sought by many factions: the Bergs;
+              the corrupt government of the great pit-city; the rebel group Amok
+              (led by Tanatah); and the Church of Industrial Saints (commonly
+              referred to as the Techno-Technos or the
+              <a
+                href="https://www.humanoids.com/y_catalog/book?work_id=19"
+                target="_blank"
+                rel="noopener"
+                alt="Technopriests"
+              >
+                Technopriests</a
+              >): a sinister technocratic cult which worships the Dark Incal.
+              Animah (an allusion to anima), the keeper of the Light Incal,
+              seeks it as well.
+            </p>
+            <p>
+              During the journey DiFool and Deepo are joined by Animah, The
+              Metabaron, Sunmoon, Tanatah (sister of Animah) and
+              <a
+                href="https://comicvine.gamespot.com/kill-wolfhead/4005-16594/"
+                target="_blank"
+                rel="noopener"
+                alt="Kill Wolfhead character"
+              >
+                Kill Wolfhead,</a
+              >
+              with a task of saving the universe from the forces of the
+              <strong>Dark Incal</strong>, and the
+              <strong>Technopriests</strong> manufactured and launched into
+              outer space sun-eating Dark Egg. As the darkness is overcome,
+              DiFool is brought before <strong>Orh</strong>, the father-like
+              divinity, who told him to he must remember what he witnessed. As
+              DiFool falls away, he finds himself where he was at the beginning,
+              falling down the shaft.
+            </p>
+            <p>
+              <a
+                href="https://disneyandmore.blogspot.com/2012/03/legendary-artist-jean-moebius-giraud.html"
+                target="_blank"
+                rel="noopener"
+                alt="Moebius tribute article"
+                >In his later life</a
+              >, Giraud decided to revive the Arzak character in an elaborate
+              new adventure series; the first volume of a planned trilogy,
+              <a
+                href="https://www.goodreads.com/book/show/9522602-arzak"
+                target="_blank"
+                rel="noopener"
+                alt="Arzak l'arpenteur in goodreads"
+              >
+                <strong>Arzak l'arpenteur</strong></a
+              >, appeared in 2010. He also added to the Airtight Garage series
+              with a new volume entitled
+              <a
+                href="https://www.priceminister.com/offer/buy/66770662/Le-Chasseur-Deprime-Tome-1-Livre.html"
+                target="_blank"
+                rel="noopener"
+                alt="Le chasseur déprime collection"
+              >
+                Le chasseur déprime.
+              </a>
+            </p>
+          </article>
 
-				<p>
-					The hero of The Airtight Garage, Major Grubert, was also the subject of some shorter
-					comic-strip stories, <a href="https://www.pinterest.com/vmitsouko/moebius-jean-giraud/"
-						alt="moebius images in pinterest.com" alt="moebius poster images on pinterest.com" target="_blank"> poster
-						images </a>, and <a href="https://everydaymoebius.tumblr.com/" alt="moebius poster images on tumblr.com" target="_blank"> paintings</a> over the course of his creator's long career, and eventually became the central
-					character in an entire sketchbook-as-graphic-novel entitled "Le Major", published in a limited edition facsimile
-					in 2011. Major Grubert and his lady companion <strong>Malvina</strong> also appear throughout the six-volume Inside Moebius
-					series (2000–2008).
-				</p>
-			</article>
+          <!-- 06 Epilogue - Video -->
+          <iframe
+            class="img-full img-responsive video lazyload"
+            style="height: 510px; margin-top:50px;"
+            data-src="https://www.youtube.com/embed/yB0Ma9027B4"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <!-- /.col-md-12 -->
+      </div>
+      <!-- /.container -->
 
-			<!-- 05 The Incal -->
-			<article>
-				<h2>The Incal</h2>
-				<p>
-					<a href="https://www.humanoids.com/y_page/pageShow/id/38" target="_blank" alt="The Incal book">
-						<img class="img-left img-responsive lazyload"
-							data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/inkal-black-egg.jpg"
-							alt="The Incal" />
-					</a>
-					In 1980 he started his famous <a href="https://www.humanoids.com/y_page/pageShow/id/38" target="_blank"
-						alt="The Incal series"><strong>L'Incal</strong></a>, a <a href="https://comicvine.gamespot.com/lincal/4050-59696/" target="_blank"> 6 book series </a> in collaboration with <a
-						href="https://comicvine.gamespot.com/alejandro-jodorowsky/4040-47011/" alt="Alejandro Jodorowsky"
-						target="_blank"><strong>Alejandro Jodorowsky.</strong></a> From 1985 to 2001 he also created his
-					six-volume fantasy series <strong>"Le Monde d'Edena"</strong>, portions of which appeared in English as <a href="https://doorofperception.com/2017/11/moebius-the-world-of-edena/" alt="Le Monde d'Edena" target="_blank"> <strong>The World of Aedena</strong></a> Cycle. The stories were strongly influenced by the teachings of Jean-Paul Appel-Guéry.
-				</p>
-				<p>
-					The story of <strong>Incal</strong> is placed in the dystopian capital city of an insignificant planet in a human-dominated galactic empire, wherein the <strong>Bergs</strong>, aliens who resemble featherless birds and reside in a neighboring galaxy, make up another power block. It starts with <a href="https://comicvine.gamespot.com/john-difool/4005-16573/issues-cover/" target="_blank">DiFool</a> tossed
-					off by a masked group from the "Suicide Alley" down to the great acid lake, luckily saved by a police cruiser.
-				</p>
-				<p>
-					<a href="https://www.humanoids.com/y_page/pageShow/id/38" target="_blank">
-						<img class="img-moebius img-right img-responsive lazyload"
-							data-src="https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/moebius-incal001-229x300.jpg"
-							alt="The Incal cover image" />
-					</a>During the questioning he denied that he received the <strong>Light Incal</strong>, a crystal of enormous
-					and infinite powers (it guides and protects those who believe in it, from a dying Berg.
-					The Incal is then sought by many factions: the Bergs; the corrupt government of the great pit-city; the rebel
-					group Amok (led by Tanatah); and the Church of Industrial Saints (commonly referred to as the Techno-Technos
-					or the <a href="https://www.humanoids.com/y_catalog/book?work_id=19" target="_blank" alt="Technopriests">
-						Technopriests</a>): a sinister technocratic cult which worships the Dark Incal. Animah (an allusion to
-					anima), the keeper of the Light Incal, seeks it as well.
-				</p>
-				<p>
-					During the journey DiFool and Deepo are joined by Animah, The Metabaron, Sunmoon, Tanatah (sister of Animah)
-					and <a href="https://comicvine.gamespot.com/kill-wolfhead/4005-16594/" target="_blank" alt="Kill Wolfhead character">
-					Kill Wolfhead,</a> with a task of saving the universe from the forces of the <strong>Dark Incal</strong>, and
-					the <strong>Technopriests</strong> manufactured and launched into outer space sun-eating Dark Egg. As the
-					darkness is overcome, DiFool is brought before <strong>Orh</strong>, the father-like divinity, who told him to
-					he must remember what he witnessed. As DiFool falls away, he finds himself where he was at the beginning,
-					falling down the shaft.
-				</p>
-				<p>
-					<a href="https://disneyandmore.blogspot.com/2012/03/legendary-artist-jean-moebius-giraud.html" target="_blank"
-						alt="Moebius tribute article">In his later life</a>, Giraud decided to revive the Arzak character in an
-					elaborate new adventure series; the first volume of a planned trilogy,
-					<a href="https://www.goodreads.com/book/show/9522602-arzak" target="_blank"
-						alt="Arzak l'arpenteur in goodreads">
-						<strong>Arzak l'arpenteur</strong></a>, appeared in 2010. He also added to the Airtight Garage series with a new volume entitled
-					<a href="https://www.priceminister.com/offer/buy/66770662/Le-Chasseur-Deprime-Tome-1-Livre.html"
-						target="_blank" alt="Le chasseur déprime collection">
-						Le chasseur déprime.
-					</a>
-				</p>
-			</article>
-
-			<!-- 06 Epilogue - Video -->
-			<iframe class="img-full img-responsive video lazyload" style="height: 510px; margin-top:50px;"
-				data-src="https://www.youtube.com/embed/yB0Ma9027B4" frameborder="0"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-			</iframe>
-
-		</div><!-- /.col-md-12 -->
-	</div><!-- /.container -->
-
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3><a class="em-text" href="http://www.artfutura.org/v3/en/moebius/" target="_blank">ArtFutura - Moebius
-							interview</a> &#x205E;
-						<a class="em-text" href="https://en.wikipedia.org/wiki/Jean_Giraud" target="_blank">Learn More</a>
-					</h3>
-					<p>&copy; 2016 - All rights of the images belong to the artist &amp; to their respective owners</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-</div>
-<!-- /#main -->
-</body>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>
+                <a
+                  class="em-text"
+                  href="https://www.artfutura.org/v3/en/moebius/"
+                  target="_blank"
+                  rel="noopener"
+                  >ArtFutura - Moebius interview</a
+                >
+                &#x205E;
+                <a
+                  class="em-text"
+                  href="https://en.wikipedia.org/wiki/Jean_Giraud"
+                  target="_blank"
+                  rel="noopener"
+                  >Learn More</a
+                >
+              </h3>
+              <p>
+                &copy; 2016 - All rights of the images belong to the artist
+                &amp; to their respective owners
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- /#main -->
+  </body>
+</html>
