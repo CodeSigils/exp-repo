@@ -9,7 +9,6 @@
 
 /*--- CSS VARS ---*/
 :root {
-<<<<<<< HEAD
   --colors-light-grey: #7c7c7c;
   --colors-dark-grey: #21212c;
   --colors-sky-blue: #337ab7;
@@ -34,31 +33,6 @@
   --img-zoom-scale: scale(1.4);
   --img-zoom-speed: all 1s ease;
   --browser-translate: translateY(0px);
-=======
-  --colors-light-grey   : #7c7c7c;
-  --colors-dark-grey    : #21212c;
-  --colors-sky-blue     : #337ab7;
-  --colors-dark-blue    : #164269;
-  --colors-sea-green    : #1a9181;
-  --colors-sand-white   : #e0dfcd;
-  --fonts-family-main   : Helvetica, 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
-    Ubuntu, Cantarell, 'Helvetica Neue',  'Open Sans', Arial, sans-serif;
-  --fonts-p             : 125%;
-  --fonts-p-lrg         : 148%;
-  --fonts-h2            : 115%;
-  --fonts-h2-lrg        : 300%;
-  --fonts-h1            : 115%;
-  --fonts-h1-lrg        : 300%;
-  --fonts-h1-title      : 400%;
-  --img-header          : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/voyagedhermes_moebius_07.png');
-  --img-pattern         : url('https://raw.githubusercontent.com/CodeSigils/exp-repo/master/tribute-page/img/patterns/topography.png');
-  --img-width           : 22em;
-  --img-text-space      : 20px;
-  --img-border-radius   : 5px;
-  --img-zoom-scale      : scale(1.4);
-  --img-zoom-speed      : all 1s ease;
-  --browser-translate   : translateY(0px);
->>>>>>> fe3f39968b08894baf4e2a4f4151cdec746faa85
 }
 
 /*--- Main and links ---*/
@@ -86,7 +60,7 @@ a:visited {
 
 /*--- Paragraphs-Emphasis-Title ---*/
 p {
-  font-size: var(--fonts-p);
+  font-size: var(--fonts-p-nm);
 }
 .em-text {
   color: var(--colors-sea-green, #1a9181) !important;
@@ -113,19 +87,11 @@ p {
   text-align: center;
   margin-bottom: 30px;
 }
-<<<<<<< HEAD
 #tribute-info h1 {
   font-size: var(--fonts-h1-lg);
 }
 #tribute-info p {
   font-size: var(--fonts-p-lg);
-=======
-#prologue h1 {
-  font-size: var(--fonts-h1-lrg);
-}
-#prologue p {
-  font-size: var(--fonts-p-lrg);
->>>>>>> fe3f39968b08894baf4e2a4f4151cdec746faa85
 }
 
 /*--- Articles ---*/
@@ -135,7 +101,7 @@ article {
 }
 article h2 {
   display: block;
-  font-size: var(--fonts-h2-lrg);
+  font-size: var(--fonts-h2-lg);
 }
 article img {
   margin-bottom: 10px;
@@ -169,7 +135,7 @@ img {
   width: var(--img-width);
 }
 .img-moebius {
-  width: 300px;
+  width: 250px;
 }
 .img-full {
   width: 100%;
